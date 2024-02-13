@@ -26,10 +26,11 @@ body {
 
 /* Estilos para las columnas */
 .column {
-    width: 45%;
+    width: 90%;
     box-sizing: border-box;
     padding: 0 10px;
     margin-bottom: 20px;
+    text-align: left; /* Cambiamos el alineamiento del texto a la izquierda */
 }
 
 /* Estilos para los títulos principales */
