@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Máquinas Virtuales TryHackMe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f6f6f6;
+            color: #ffffff; /* Hacer todo el texto blanco */
+            background-image: url('https://i.imgur.com/wxtv5Ma.jpg'); /* URL directa de la imagen alojada en Imgur */
+            background-size: cover; /* Ajusta el tamaño de la imagen al tamaño del contenedor */
+            background-position: center; /* Centra la imagen de fondo */
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+        .column {
+            width: 45%;
+            box-sizing: border-box;
+            padding: 0 10px;
+            margin-bottom: 20px;
+            /*background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            margin-top: 0;
+            font-family: 'Poppins', sans-serif;
+            font-size: 60px; /* Aumentar tamaño del título */
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #ffffff; /* Hacer el texto blanco */
+            margin-bottom: 20px;
+            font-style: italic; /* Agregar estilo gotico */
+        }
+        h2, h3 {
+            cursor: pointer;
+            color: #0366d6; /* Cambiar color de h2 y h3 */
+            transition: color 0.3s ease; /* Agregamos transición para suavizar el cambio de color */
+            font-family: 'Open Sans', sans-serif; /* Mantener la fuente */
+        }
+        .details {
+            display: none;
+            margin-top: 10px;
+            text-align: left;
+        }
+        p {
+            font-style: italic;
+        }
+        .image {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .banner {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .social-icons {
+            width: 100%;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .social-icons a {
+            display: inline-block;
+            margin: 0 10px;
+            color: #1abc9c;
+            transition: color 0.3s ease; /* Agregamos transición para suavizar el cambio de color */
+        }
+        .social-icons a:hover {
+            color: #0366d6; /* Cambiamos el color al pasar el cursor */
+        }
+        .favicon {
+            /* Agrega el favicon.ico en la raíz de tu proyecto */
+            /* Se puede agregar dentro del head como: <link rel="icon" href="favicon.ico" type="image/x-icon"> */
+        }
+
+        /* Estilos para los títulos específicos */
+        .white-title {
+            color: #ffffff; /* Color blanco */
+        }
+    </style>
+</head>
+<body>
+
+
+
+    <div class="banner">
+        <h1>Registro de Máquinas Virtuales TryHackMe</h1>
+        <!-- Agrega un banner principal con tu nombre o un logo -->
+        <!-- Por ejemplo: <img src="banner.png" alt="Banner" class="image"> -->
+    </div>
+    <div class="container">
+        <div class="column">
+            <h2 onclick="toggleDetails('codigos-aprendidos')">Códigos Aprendidos</h2>
+            <div id="codigos-aprendidos" class="details">
+                <img src="https://i.imgur.com/pVgwlhX.jpg" alt="Códigos Aprendidos" class="image">
+                <p>Descripción breve sobre códigos aprendidos...</p>
+            </div>
+            <h2 onclick="toggleDetails('scrips-utiles')">Scripts Útiles</h2>
+            <div id="scrips-utiles" class="details">
+                <img src="https://i.imgur.com/nVb0ATt.jpg" alt="Scripts Útiles" class="image">
+                <p>Descripción breve sobre scripts útiles...</p>
+            </div>
+            <h2 onclick="toggleDetails('comandos-utiles')">Comandos Útiles</h2>
+            <div id="comandos-utiles" class="details">
+                <img src="https://i.imgur.com/RMGgX2I.jpg" alt="Comandos Útiles" class="image">
+                <p>Descripción breve sobre comandos útiles...</p>
+            </div>
+            <h2 onclick="toggleDetails('configuracion-kali')">Configuración de Kali</h2>
+            <div id="configuracion-kali" class="details">
+                <img src="https://i.imgur.com/hynDxGk.jpg" alt="Configuración de Kali" class="image">
+                <p>Descripción breve sobre la configuración de Kali Linux...</p>
+            </div>
+        </div>
+      <div class="column">
+    <h2>Máquinas Virtuales Resueltas</h2>
+    <div id="rick-pepinillo">
+        <h3 onclick="toggleDetails('rick-pepinillo-details')">Rick Pepinillo</h3>
+        <div id="rick-pepinillo-details" class="details">
+            <img src="https://i.imgur.com/lxiO7bG.jpg" alt="Rick Pepinillo" class="image">
+            <p>En esta máquina aprendí...</p>
+        </div>
+    </div>
+    <div id="Bounty-Hacker">
+        <h3 onclick="toggleDetails('bounty-hacker-details')">Bounty Hacker</h3>
+        <div id="bounty-hacker-details" class="details">
+            <img src="https://i.imgur.com/Eqzb75F.jpg" alt="Bounty-Hacker" class="image">
+            <h3 onclick="toggleDetails('Bounty-Hacker-Paso1')">Paso 1: Escaneo inicial</h3>
+            <div id="Bounty-Hacker-Paso1" class="details">
+                <p>Identificar la dirección IP de la máquina víctima:</p>
+                <pre><code>ping &lt;IP&gt;</code></pre>
+                <p>Este comando envía un paquete de prueba a la dirección IP especificada y espera una respuesta. Nos ayuda a verificar la conectividad y la disponibilidad de la máquina.</p>
+
+                <!-- Más detalles del paso 1 -->
+    </div>
+
+    <h3 onclick="toggleDetails('Bounty-Hacker-Paso2')">Paso 2: Enumeración y acceso inicial</h3>
+    <div id="Bounty-Hacker-Paso2" class="details">
+        <p>Exploración del servicio HTTP (puerto 80):</p>
+        <pre><code>curl http://&lt;IP&gt;</code></pre>
+        <p>Curl es una herramienta de línea de comandos que se utiliza para transferir datos desde o hacia un servidor. En este caso, lo utilizamos para acceder al servicio web HTTP y obtener información sobre la página.</p>
+        
+        <p>Acceso al servicio FTP (puerto 21):</p>
+        <pre><code>ftp &lt;IP&gt;</code></pre>
+        <p>Este comando inicia una sesión FTP con la máquina remota. Nos permite conectarnos al servicio FTP y explorar archivos en el servidor.</p>
+    </div>
+    
+    <!-- Paso 3 -->
+    <h3 onclick="toggleDetails('Bounty-Hacker-Paso3')">Paso 3: Obtención de información y credenciales</h3>
+    <div id="Bounty-Hacker-Paso3" class="details">
+        <p>Exfiltración de archivos desde el servicio FTP:</p>
+        <pre><code>get logs.txt</code></pre>
+        <pre><code>get task.txt</code></pre>
+        <p>Estos comandos descargan los archivos logs.txt y task.txt desde el servidor FTP a nuestra máquina local.</p>
+        
+        <p>Análisis de archivos descargados:</p>
+        <p>Utiliza cat o un editor de texto para revisar los archivos descargados y extraer información relevante, como posibles contraseñas o pistas.</p>
+    </div>
+    
+    <!-- Paso 4 -->
+    <h3 onclick="toggleDetails('Bounty-Hacker-Paso4')">Paso 4: Explotación de credenciales</h3>
+    <div id="Bounty-Hacker-Paso4" class="details">
+        <p>Fuerza bruta contra SSH (puerto 22):</p>
+        <pre><code>hydra -l link -P logs.txt ssh://&lt;IP&gt;</code></pre>
+        <p>hydra: Esta es una herramienta de fuerza bruta que puede realizar ataques contra varios servicios, como SSH, FTP, etc.</p>
+        <p>-l link: Especifica el nombre de usuario a utilizar en el ataque de fuerza bruta.</p>
+        <p>-P logs.txt: Especifica el archivo que contiene la lista de contraseñas que se probarán en el ataque.</p>
+    </div>
+    
+    <!-- Paso 5 -->
+    <h3 onclick="toggleDetails('Bounty-Hacker-Paso5')">Paso 5: Escalada de privilegios</h3>
+    <div id="Bounty-Hacker-Paso5" class="details">
+        <p>Revisión de permisos Sudo:</p>
+        <pre><code>sudo -l</code></pre>
+        <p>Este comando muestra los privilegios sudo asignados al usuario actual en la máquina remota. Nos ayuda a identificar si tenemos permisos especiales que pueden ser explotados para obtener acceso de root.</p>
+        
+        <p>Explotación de binario Sudo:</p>
+        <pre><code>sudo tar -cf /dev/null /dev/null --checkpoint=1 --checkpoint-action=exec=/bin/sh</code></pre>
+        <p>sudo tar: Utilizamos tar con el permiso sudo para crear un archivo tar vacío.</p>
+        <p>--checkpoint=1: Esta opción le indica a tar que ejecute el comando especificado después de cada archivo archivado.</p>
+        <p>--checkpoint-action=exec=/bin/sh: Esta opción ejecuta /bin/sh (una shell) después de cada archivo archivado, proporcionándonos acceso a una shell interactiva con privilegios de root.</p>
+    </div>
+    
+    <!-- Paso 6 -->
+    <h3 onclick="toggleDetails('Bounty-Hacker-Paso6')">Paso 6: Recolección de flags</h3>
+    <div id="Bounty-Hacker-Paso6" class="details">
+        <p>Recuperación de la flag de usuario y root:</p>
+        <p>Utiliza cat u otro comando para leer y recuperar el contenido de las flags.</p>
+    </div>
+</div>
+                <!-- Agrega más máquinas virtuales resueltas aquí -->
+            </div>
+        </div>
+    </div>
+
+    <div class="social-icons">
+        <!-- Agrega enlaces a tus redes sociales o proyectos relacionados -->
+        <!-- Por ejemplo: -->
+        <!-- <a href="https://twitter.com/tu_usuario" target="_blank"><img src="twitter_icon.png" alt="Twitter"></a> -->
+        <!-- <a href="https://github.com/tu_usuario" target="_blank"><img src="github_icon.png" alt="GitHub"></a> -->
+    </div>
+
+    <script>
+        function toggleDetails(id) {
+            var details = document.getElementById(id);
+            if (details.style.display === "none") {
+                details.style.display = "block";
+            } else {
+                details.style.display = "none";
+            }
+        }
+    </script>
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Agrega el favicon.ico en la raíz de tu proyecto -->
+</body>
+</html>
