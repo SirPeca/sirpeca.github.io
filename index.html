@@ -135,8 +135,6 @@
             <div id="paso1" class="details">
                 <p>Visita el sitio web oficial de Kali Linux en <a href="https://www.kali.org/downloads/">https://www.kali.org/downloads/</a>.</p>
                 <p>Descarga la versión de Kali Linux que se ajuste a tu arquitectura de sistema (32-bit o 64-bit).</p>
-                <p>Ejecuta el siguiente comando en la terminal para descargar Kali Linux:</p>
-                <pre><code>wget https://cdimage.kali.org/kali-2022.1/kali-linux-2022.1-installer-amd64.iso</code></pre>
             </div>
 
             <!-- Paso 2 -->
@@ -144,8 +142,6 @@
             <div id="paso2" class="details">
                 <p>Visita el sitio web oficial de VirtualBox en <a href="https://www.virtualbox.org/">https://www.virtualbox.org/</a>.</p>
                 <p>Descarga e instala VirtualBox para tu sistema operativo.</p>
-                <p>Ejecuta el siguiente comando en la terminal para instalar VirtualBox:</p>
-                <pre><code>sudo apt-get install virtualbox</code></pre>
             </div>
 
             <!-- Paso 3 -->
@@ -153,35 +149,50 @@
             <div id="paso3" class="details">
                 <p>Abre VirtualBox.</p>
                 <p>Haz clic en "Nuevo" para crear una nueva máquina virtual.</p>
-                <p>Asigna un nombre a tu máquina virtual y selecciona el tipo y la versión de tu sistema operativo.</p>
-                <p>Elige la cantidad de memoria RAM y crea un nuevo disco virtual.</p>
-                <p>Selecciona el tamaño del disco y elige el tipo de archivo de disco duro virtual.</p>
+                <p>Sigue el asistente para crear una nueva máquina virtual con la siguiente configuración:</p>
+                <ul>
+                    <li>Nombre: Kali Linux</li>
+                    <li>Tipo: Linux</li>
+                    <li>Versión: Debian (si está disponible)</li>
+                    <li>Asigna al menos 2 GB de memoria RAM (se recomienda más si tu sistema lo permite).</li>
+                    <li>Crea un nuevo disco duro virtual con al menos 20 GB de espacio.</li>
+                </ul>
             </div>
 
             <!-- Paso 4 -->
             <h3 onclick="toggleDetails('paso4')">Paso 4: Configurar la máquina virtual</h3>
             <div id="paso4" class="details">
-                <p>Selecciona la máquina virtual que acabas de crear y haz clic en "Configuración".</p>
-                <p>Ajusta la configuración de la máquina virtual según tus necesidades, incluyendo la cantidad de procesadores, la aceleración de hardware, la configuración de red, etc.</p>
+                <p>Selecciona la máquina virtual recién creada y haz clic en "Configuración".</p>
+                <p>En la pestaña "Sistema", asegúrate de que el orden de arranque sea "Disco óptico" y luego "Disco duro".</p>
+                <p>En la pestaña "Almacenamiento", selecciona el archivo de imagen ISO de Kali Linux que descargaste en el Paso 1 en la sección "Controlador: IDE".</p>
+                <p>Haz clic en "OK" para guardar la configuración.</p>
             </div>
 
             <!-- Paso 5 -->
             <h3 onclick="toggleDetails('paso5')">Paso 5: Instalar Kali Linux en la máquina virtual</h3>
             <div id="paso5" class="details">
-                <p>Inicia la máquina virtual y selecciona la imagen ISO de Kali Linux que descargaste como medio de arranque.</p>
-                <p>Sigue las instrucciones en pantalla para instalar Kali Linux en la máquina virtual, incluyendo la configuración de particiones, la selección de idioma, la configuración de red, etc.</p>
+                <p>Inicia la máquina virtual.</p>
+                <p>Selecciona la opción de arranque "Instalar" en el menú de inicio de Kali Linux.</p>
+                <p>Sigue las instrucciones del instalador de Kali Linux para completar la instalación en el disco virtual que creaste.</p>
             </div>
 
             <!-- Paso 6 -->
             <h3 onclick="toggleDetails('paso6')">Paso 6: Configurar Kali Linux después de la instalación</h3>
             <div id="paso6" class="details">
-                <p>Inicia sesión en Kali Linux con las credenciales predeterminadas (usuario: root, contraseña: toor).</p>
-                <p>Actualiza los repositorios e instala las actualizaciones del sistema utilizando los siguientes comandos:</p>
-                <pre><code>apt-get update
-apt-get upgrade</code></pre>
-                <p>Ajusta la configuración de red, instala herramientas adicionales y configura Kali Linux según tus preferencias.</p>
-        
-
+                <p>Inicia sesión con el nombre de usuario y la contraseña predeterminados (generalmente "root" y "toor").</p>
+                <p>Abre una terminal.</p>
+                <p>Ejecuta los siguientes comandos para actualizar los repositorios y el sistema:</p>
+                <pre><code>apt update
+apt upgrade -y</code></pre>
+                <p>Configura la zona horaria:</p>
+                <pre><code>dpkg-reconfigure tzdata</code></pre>
+                <p>Configura la configuración regional (opcional):</p>
+                <pre><code>dpkg-reconfigure locales</code></pre>
+                <p>Instala las herramientas adicionales según tus necesidades (por ejemplo, herramientas de pentesting):</p>
+                <pre><code>apt install kali-linux-full</code></pre>
+                <p>Reinicia la máquina virtual después de completar la instalación de los paquetes:</p>
+                <pre><code>reboot</code></pre>
+                <p>¡Ahora tienes Kali Linux instalado y configurado en tu máquina virtual! Puedes comenzar a explorar y utilizar las herramientas incluidas para tus pruebas de penetración y proyectos de seguridad.</p>
             </div>
        </div> 
             <h2 onclick="toggleDetails('codigos-aprendidos')">Códigos Aprendidos</h2>
