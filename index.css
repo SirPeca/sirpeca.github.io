@@ -52,13 +52,19 @@ h1 {
 }
 
 /* Estilos para los títulos secundarios */
-h2, h3 {
+h2 {
     cursor: pointer;
     color: #0366d6; /* Cambiar color de h2 y h3 */
     transition: color 0.3s ease; /* Agregamos transición para suavizar el cambio de color */
     font-family: 'broadway', sans-serif; /* Mantener la fuente */
 }
-
+/* Estilos para los títulos terciarios */
+h3 {
+    cursor: pointer;
+    color: #0366d6; /* Cambiar color de h2 y h3 */
+    transition: color 0.3s ease; /* Agregamos transición para suavizar el cambio de color */
+    font-family: 'broadway', sans-serif; /* Mantener la fuente */
+}
 /* Estilos para los detalles que se ocultan */
 .details {
     display: none;
