@@ -297,7 +297,248 @@
             <h2 onclick="toggleDetails('comandos-utiles')">Comandos Útiles</h2>
             <div id="comandos-utiles" class="details">
                 <img src="https://i.imgur.com/0wmQ0ur.jpg" alt="Comandos Útiles" class="image">
-                <p>Descripción breve sobre comandos útiles...</p>
+                <p>A continuación se muestran algunos ejemplos de comandos útiles en sistemas Unix/Linux:</p>
+
+    <!-- Comando 1: ls -->
+    <h3 onclick="toggleDetails('ls-details')">ls</h3>
+    <div id="ls-details" class="details">
+        <p>El comando ls se utiliza para listar archivos y directorios en el sistema.</p>
+        <p>Ejemplo de uso:</p>
+        <pre><code>ls -l</code></pre>
+    </div>
+
+    <!-- Comando 2: cd -->
+    <h3 onclick="toggleDetails('cd-details')">cd</h3>
+    <div id="cd-details" class="details">
+        <p>El comando cd se utiliza para cambiar el directorio actual.</p>
+        <p>Ejemplo de uso:</p>
+        <pre><code>cd Documents</code></pre>
+    </div>
+
+    <!-- Comando 3: mkdir -->
+    <h3 onclick="toggleDetails('mkdir-details')">mkdir</h3>
+    <div id="mkdir-details" class="details">
+        <p>El comando mkdir se utiliza para crear un nuevo directorio.</p>
+        <p>Ejemplo de uso:</p>
+        <pre><code>mkdir new_directory</code></pre>
+    </div>
+
+    <!-- Comando 4: cp -->
+    <h3 onclick="toggleDetails('cp-details')">cp</h3>
+    <div id="cp-details" class="details">
+        <p>El comando cp se utiliza para copiar archivos y directorios.</p>
+        <p>Ejemplo de uso:</p>
+        <pre><code>cp file1.txt file2.txt</code></pre>
+    </div>
+
+    <!-- Comando 5: mv -->
+    <h3 onclick="toggleDetails('mv-details')">mv</h3>
+    <div id="mv-details" class="details">
+        <p>El comando mv se utiliza para mover o renombrar archivos y directorios.</p>
+        <p>Ejemplo de uso:</p>
+        <pre><code>mv file1.txt new_location/file1.txt</code></pre>
+    </div>
+
+    <!-- Comando 6: rm -->
+    <h3 onclick="toggleDetails('rm-details')">rm</h3>
+    <div id="rm-details" class="details">
+        <p>El comando rm se utiliza para eliminar archivos y directorios.</p>
+        <p>Ejemplo de uso:</p>
+        <pre><code>rm file.txt</code></pre>
+    </div>
+
+    <!-- Comando 7: touch -->
+    <h3 onclick="toggleDetails('touch-details')">touch</h3>
+    <div id="touch-details" class="details">
+        <p>El comando touch se utiliza para crear un archivo vacío o actualizar la fecha de acceso y modificación de un archivo existente.</p>
+        <p>Ejemplo de uso:</p>
+        <pre><code>touch file.txt</code></pre>
+    </div>
+
+    <!-- Comando 8: cat -->
+    <h3 onclick="toggleDetails('cat-details')">cat</h3>
+    <div id="cat-details" class="details">
+        <p>El comando cat se utiliza para mostrar el contenido de un archivo.</p>
+        <p>Ejemplo de uso:</p>
+        <pre><code>cat file.txt</code></pre>
+    </div>
+
+    <!-- Comando 9: grep -->
+    <h3 onclick="toggleDetails('grep-details')">grep</h3>
+    <div id="grep-details" class="details">
+        <p>El comando grep se utiliza para buscar patrones de texto en archivos.</p>
+        <p>Ejemplo de uso:</p>
+        <pre><code>grep "pattern" file.txt</code></pre>
+    </div>
+
+    <!-- Comando 10: head -->
+    <h3 onclick="toggleDetails('head-details')">head</h3>
+    <div id="head-details" class="details">
+        <p>El comando head se utiliza para mostrar las primeras líneas de un archivo.</p>
+        <p>Ejemplo de uso:</p>
+        <pre><code>head -n 10 file.txt</code></pre>
+    </div>
+
+    <!-- Comando 11: tail -->
+    <h3 onclick="toggleDetails('tail-details')">tail</h3>
+    <div id="tail-details" class="details">
+        <p>El comando tail se utiliza para mostrar las últimas líneas de un archivo.</p>
+        <p>Ejemplo de uso:</p>
+        <pre><code>tail -n 10 file.txt</code></pre>
+    </div>
+
+    <!-- Comando 12: wc -->
+    <h3 onclick="toggleDetails('wc-details')">wc</h3>
+    <div id="wc-details" class="details">
+        <p>El comando wc se utiliza para contar líneas, palabras y caracteres en un archivo.</p>
+        <p>Ejemplo de uso:</p>
+        <pre><code>wc -l file.txt</code></pre>
+    </div>
+
+    <!-- Comando 13: chmod -->
+    <h3 onclick="toggleDetails('chmod-details')">chmod</h3>
+    <div id="chmod-details" class="details">
+        <p>El comando chmod se utiliza para cambiar los permisos de acceso de un archivo o directorio.</p>
+        <p>Ejemplo de uso:</p>
+        <pre><code>chmod 755 file.txt</code></pre>
+    </div>
+
+    <!-- Comando 14: chown -->
+    <h3 onclick="toggleDetails('chown-details')">chown</h3>
+    <div id="chown-details" class="details">
+        <p>El comando chown se utiliza para cambiar el propietario y el grupo de un archivo o directorio.</p>
+        <p>Ejemplo de uso:</p>
+        <pre><code>chown user:group file.txt</code></pre>
+    </div>
+
+    <!-- Comando 15: ps -->
+    <h3 onclick="toggleDetails('ps-details')">ps</h3>
+    <div id="ps-details" class="details">
+        <p>El comando ps se utiliza para mostrar los procesos en ejecución en el sistema.</p>
+        <p>Ejemplo de uso:</p>
+        <pre><code>ps aux</code></pre>
+    </div>
+
+    <!-- Comando 16: top -->
+    <h3 onclick="toggleDetails('top-details')">top</h3>
+    <div id="top-details" class="details">
+        <p>El comando top se utiliza para mostrar los procesos en ejecución en tiempo real.</p>
+        <p>Ejemplo de uso:</p>
+        <pre><code>top</code></pre>
+    </div>
+
+    <!-- Comando 17: kill -->
+    <h3 onclick="toggleDetails('kill-details')">kill</h3>
+    <div id="kill-details" class="details">
+        <p>El comando kill se utiliza para enviar señales a procesos en ejecución para detenerlos o controlar su comportamiento.</p>
+        <p>Ejemplo de uso:</p>
+        <pre><code>kill -9 PID</code></pre>
+    </div>
+
+    <!-- Comando 18: df -->
+    <h3 onclick="toggleDetails('df-details')">df</h3>
+    <div id="df-details" class="details">
+        <p>El comando df se utiliza para mostrar el espacio en disco disponible en el sistema de archivos.</p>
+        <p>Ejemplo de uso:</p>
+        <pre><code>df -h</code></pre>
+    </div>
+
+    <!-- Comando 19: du -->
+    <h3 onclick="toggleDetails('du-details')">du</h3>
+    <div id="du-details" class="details">
+        <p>El comando du se utiliza para mostrar el espacio utilizado por los archivos y directorios en el sistema.</p>
+        <p>Ejemplo de uso:</p>
+        <pre><code>du -sh directory</code></pre>
+    </div>
+
+    <!-- Comando 20: find -->
+    <h3 onclick="toggleDetails('find-details')">find</h3>
+    <div id="find-details" class="details">
+        <p>El comando find se utiliza para buscar archivos y directorios en el sistema de archivos.</p>
+        <p>Ejemplo de uso:</p>
+        <pre><code>find /home/user -name "*.txt"</code></pre>
+    </div>
+
+    <!-- Comando 21: tar -->
+    <h3 onclick="toggleDetails('tar-details')">tar</h3>
+    <div id="tar-details" class="details">
+        <p>El comando tar se utiliza para crear, listar y extraer archivos comprimidos en formato tar.</p>
+        <p>Ejemplo de uso:</p>
+        <pre><code>tar -cvf archive.tar files</code></pre>
+    </div>
+
+    <!-- Comando 22: gzip -->
+    <h3 onclick="toggleDetails('gzip-details')">gzip</h3>
+    <div id="gzip-details" class="details">
+        <p>El comando gzip se utiliza para comprimir archivos utilizando el algoritmo de compresión gzip.</p>
+        <p>Ejemplo de uso:</p>
+        <pre><code>gzip file.txt</code></pre>
+    </div>
+
+    <!-- Comando 23: gunzip -->
+    <h3 onclick="toggleDetails('gunzip-details')">gunzip</h3>
+    <div id="gunzip-details" class="details">
+        <p>El comando gunzip se utiliza para descomprimir archivos comprimidos con gzip.</p>
+        <p>Ejemplo de uso:</p>
+        <pre><code>gunzip file.txt.gz</code></pre>
+    </div>
+
+    <!-- Comando 24: wget -->
+    <h3 onclick="toggleDetails('wget-details')">wget</h3>
+    <div id="wget-details" class="details">
+        <p>El comando wget se utiliza para descargar archivos desde la web.</p>
+        <p>Ejemplo de uso:</p>
+        <pre><code>wget https://example.com/file.txt</code></pre>
+    </div>
+
+    <!-- Comando 25: curl -->
+    <h3 onclick="toggleDetails('curl-details')">curl</h3>
+    <div id="curl-details" class="details">
+        <p>El comando curl se utiliza para transferir datos desde o hacia un servidor utilizando varios protocolos.</p>
+        <p>Ejemplo de uso:</p>
+        <pre><code>curl -O https://example.com/file.txt</code></pre>
+    </div>
+
+    <!-- Comando 26: ssh -->
+    <h3 onclick="toggleDetails('ssh-details')">ssh</h3>
+    <div id="ssh-details" class="details">
+        <p>El comando ssh se utiliza para iniciar una sesión segura en un servidor remoto.</p>
+        <p>Ejemplo de uso:</p>
+        <pre><code>ssh user@example.com</code></pre>
+    </div>
+
+    <!-- Comando 27: scp -->
+    <h3 onclick="toggleDetails('scp-details')">scp</h3>
+    <div id="scp-details" class="details">
+        <p>El comando scp se utiliza para transferir archivos de forma segura entre hosts.</p>
+        <p>Ejemplo de uso:</p>
+        <pre><code>scp file.txt user@example.com:/remote/directory</code></pre>
+    </div>
+
+    <!-- Comando 28: rsync -->
+    <h3 onclick="toggleDetails('rsync-details')">rsync</h3>
+    <div id="rsync-details" class="details">
+        <p>El comando rsync se utiliza para sincronizar archivos y directorios entre hosts.</p>
+        <p>Ejemplo de uso:</p>
+        <pre><code>rsync -avz source/ destination/</code></pre>
+    </div>
+
+    <!-- Comando 29: uptime -->
+    <h3 onclick="toggleDetails('uptime-details')">uptime</h3>
+    <div id="uptime-details" class="details">
+        <p>El comando uptime se utiliza para mostrar el tiempo de actividad del sistema.</p>
+        <p>Ejemplo de uso:</p>
+        <pre><code>uptime</code></pre>
+    </div>
+
+    <!-- Comando 30: history -->
+    <h3 onclick="toggleDetails('history-details')">history</h3>
+    <div id="history-details" class="details">
+        <p>El comando history se utiliza para mostrar el historial de comandos ejecutados por el usuario.</p>
+        <p>Ejemplo de uso:</p>
+        <pre><code>history</code></pre>
+    </div>
+</div>
             </div>
             <h2 onclick="toggleDetails('configuracion-kali')">Configuración de Kali</h2>
             <div id="configuracion-kali" class="details">
