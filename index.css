@@ -96,3 +96,20 @@ p {
 .social-icons a:hover {
     color: #0366d6; /* Cambiamos el color al pasar el cursor */
 }
+
+/* Media Query para dispositivos móviles con un ancho máximo de 600px */
+@media only screen and (max-width: 600px) {
+    /* Estilos específicos para dispositivos móviles */
+    body {
+        font-size: 14px; /* Ajuste de tamaño de fuente para dispositivos móviles */
+    }
+    .container {
+        width: 100%; /* Ajuste del ancho al 100% para dispositivos móviles */
+    }
+    .column {
+        width: 100%; /* Ajuste del ancho al 100% para dispositivos móviles */
+    }
+    h1 {
+        font-size: 40px; /* Ajuste de tamaño de fuente para títulos principales en dispositivos móviles */
+    }
+}
