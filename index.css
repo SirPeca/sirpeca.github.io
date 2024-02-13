@@ -36,14 +36,14 @@ body {
 /* Estilos para los títulos principales */
 h1 {
     margin-top: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Protest Guerrilla', sans-serif;
     font-size: 40px; /* Aumentar tamaño del título */
     font-weight: 700;
     letter-spacing: 2px;
     text-transform: uppercase;
     color: #ffffff; /* Hacer el texto blanco */
     margin-bottom: 20px;
-    font-style: nyala; /* Agregar estilo gótico */
+    font-style: Protest Guerrilla; /* Agregar estilo gótico */
 }
 
 /* Estilos para los títulos secundarios */
