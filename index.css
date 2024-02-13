@@ -1,0 +1,98 @@
+/* Estilos para el cuerpo de la página */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f6f6f6;
+    color: #ffffff; /* Hacer todo el texto blanco */
+    background-image: url('https://i.imgur.com/wxtv5Ma.jpg'); /* URL directa de la imagen alojada en Imgur */
+    background-size: cover; /* Ajusta el tamaño de la imagen al tamaño del contenedor */
+    background-position: center; /* Centra la imagen de fondo */
+}
+
+/* Estilos para el contenedor principal */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+/* Estilos para las columnas */
+.column {
+    width: 45%;
+    box-sizing: border-box;
+    padding: 0 10px;
+    margin-bottom: 20px;
+}
+
+/* Estilos para los títulos principales */
+h1 {
+    margin-top: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 60px; /* Aumentar tamaño del título */
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ffffff; /* Hacer el texto blanco */
+    margin-bottom: 20px;
+    font-style: italic; /* Agregar estilo gótico */
+}
+
+/* Estilos para los títulos secundarios */
+h2, h3 {
+    cursor: pointer;
+    color: #0366d6; /* Cambiar color de h2 y h3 */
+    transition: color 0.3s ease; /* Agregamos transición para suavizar el cambio de color */
+    font-family: 'Open Sans', sans-serif; /* Mantener la fuente */
+}
+
+/* Estilos para los detalles que se ocultan */
+.details {
+    display: none;
+    margin-top: 10px;
+    text-align: left;
+}
+
+/* Estilos para los párrafos */
+p {
+    font-style: italic;
+}
+
+/* Estilos para las imágenes */
+.image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Estilos para el banner */
+.banner {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Estilos para los íconos sociales */
+.social-icons {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+    color: #1abc9c;
+    transition: color 0.3s ease; /* Agregamos transición para suavizar el cambio de color */
+}
+
+.social-icons a:hover {
+    color: #0366d6; /* Cambiamos el color al pasar el cursor */
+}
