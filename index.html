@@ -45,17 +45,17 @@
                     const container = link.parentElement;
                     const textbox = container.querySelector('.hidden-textbox');
 
-                    // Si el cuadro de texto ya está abierto, ciérralo
+                    // Si el cuadro de texto está abierto, ciérralo; de lo contrario, ábrelo
                     if (textbox.classList.contains('show-textbox')) {
                         textbox.classList.remove('show-textbox');
                     } else {
-                        // Cerrar cualquier otro cuadro de texto abierto
+                        // Cierra cualquier otro cuadro de texto abierto
                         const openTextboxes = document.querySelectorAll('.show-textbox');
                         openTextboxes.forEach(openTextbox => {
                             openTextbox.classList.remove('show-textbox');
                         });
 
-                        // Abrir el cuadro de texto correspondiente
+                        // Abre el cuadro de texto correspondiente
                         textbox.classList.add('show-textbox');
                     }
                 });
