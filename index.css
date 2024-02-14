@@ -57,3 +57,7 @@ textarea {
     resize: none; /* Evita que el usuario cambie el tamaño del cuadro de texto */
     margin-bottom: 10px;
 }
+
+.show-textbox {
+    display: block !important;
+}
