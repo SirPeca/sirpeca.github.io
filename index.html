@@ -39,21 +39,25 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const subtitleLinks = document.querySelectorAll('.subtitle-toggle');
-            let currentTextbox = null; // Mantener un registro del cuadro de texto actualmente abierto
 
             subtitleLinks.forEach(link => {
                 link.addEventListener('click', () => {
                     const container = link.parentElement;
                     const textbox = container.querySelector('.hidden-textbox');
 
-                    // Cerrar el cuadro de texto actualmente abierto
-                    if (currentTextbox && currentTextbox !== textbox) {
-                        currentTextbox.classList.remove('show-textbox');
-                    }
+                    // Si el cuadro de texto ya está abierto, ciérralo
+                    if (textbox.classList.contains('show-textbox')) {
+                        textbox.classList.remove('show-textbox');
+                    } else {
+                        // Cerrar cualquier otro cuadro de texto abierto
+                        const openTextboxes = document.querySelectorAll('.show-textbox');
+                        openTextboxes.forEach(openTextbox => {
+                            openTextbox.classList.remove('show-textbox');
+                        });
 
-                    // Si el cuadro actual está cerrado, ábrelo; si está abierto, ciérralo
-                    textbox.classList.toggle('show-textbox');
-                    currentTextbox = textbox; // Actualizar el cuadro de texto actual
+                        // Abrir el cuadro de texto correspondiente
+                        textbox.classList.add('show-textbox');
+                    }
                 });
             });
         });
