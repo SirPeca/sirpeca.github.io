@@ -1,4 +1,59 @@
-<!-- Script JavaScript -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Hoja de Vida</title>
+    <link rel="stylesheet" href="index.css"> <!-- Enlaza tu archivo CSS -->
+    <style>
+        /* Agrega tus estilos CSS aquí */
+        .hidden-textbox {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 100%; /* Ajusta la posición inicial */
+            width: 300px; /* Ajusta el ancho del cuadro de texto */
+            background-color: white; /* Ajusta el color de fondo del cuadro de texto */
+            border: 1px solid #ccc; /* Añade un borde al cuadro de texto */
+            padding: 20px; /* Añade espacio interno al cuadro de texto */
+            z-index: 999; /* Asegura que esté por encima de otros elementos */
+        }
+
+        .show-textbox {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Mi Hoja de Vida</h1>
+        <p>¡Bienvenido a mi hoja de vida!</p>
+        <ul>
+            <li>
+                <a href="#" class="subtitle-toggle" data-text="Soy un capo de la informática">Sobre mí</a>
+                <div class="hidden-textbox">
+                    Soy un profesional de futbol.
+                </div>
+            </li>
+            <li>
+                <a href="#" class="subtitle-toggle">Formación Académica</a>
+                <div class="hidden-textbox">
+                    Texto de formación académica aquí.
+                </div>
+            </li>
+            <li>
+                <a href="#" class="subtitle-toggle">Formación Laboral</a>
+                <div class="hidden-textbox">
+                    Texto de experiencia laboral aquí.
+                </div>
+            </li>
+            <li><a href="https://www.hackthebox.eu/" target="_blank">Registro de Hack The Box</a></li>
+            <li><a href="https://portswigger.net/" target="_blank">Registro de PortSwigger</a></li>
+            <li><a href="tryhackme.html" target="_blank">Registro de TryHackMe</a></li>
+        </ul>
+    </div>
+
+    <!-- Script JavaScript -->
     <script>
         // Espera a que el DOM esté completamente cargado
         document.addEventListener('DOMContentLoaded', () => {
