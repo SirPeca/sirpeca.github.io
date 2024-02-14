@@ -11,24 +11,18 @@
         <h1>Mi Hoja de Vida</h1>
         <p>¡Bienvenido a mi hoja de vida!</p>
         <ul>
-            <li>
-                <a href="#" class="subtitle-toggle">Sobre mí</a>
-                <div class="hidden-textbox">
-                    <textarea placeholder="Ingrese información sobre usted aquí"></textarea>
-                </div>
-            </li>
-            <li>
-                <a href="#" class="subtitle-toggle">Formación Académica</a>
-                <div class="hidden-textbox">
-                    <textarea placeholder="Ingrese su formación académica aquí"></textarea>
-                </div>
-            </li>
-            <li>
-                <a href="#" class="subtitle-toggle">Formación Laboral</a>
-                <div class="hidden-textbox">
-                    <textarea placeholder="Ingrese su experiencia laboral aquí"></textarea>
-                </div>
-            </li>
+            <li><a href="#" class="subtitle-toggle" data-text="Soy un capo de la informática">Sobre mí</a></li>
+            <div class="hidden-textbox">
+                <textarea placeholder="Ingrese información sobre usted aquí" readonly></textarea>
+            </div>
+            <li><a href="#" class="subtitle-toggle">Formación Académica</a></li>
+            <div class="hidden-textbox">
+                <textarea placeholder="Ingrese su formación académica aquí"></textarea>
+            </div>
+            <li><a href="#" class="subtitle-toggle">Formación Laboral</a></li>
+            <div class="hidden-textbox">
+                <textarea placeholder="Ingrese su experiencia laboral aquí"></textarea>
+            </div>
             <li><a href="https://www.hackthebox.eu/" target="_blank">Registro de Hack The Box</a></li>
             <li><a href="https://portswigger.net/" target="_blank">Registro de PortSwigger</a></li>
             <li><a href="tryhackme.html" target="_blank">Registro de TryHackMe</a></li>
@@ -36,25 +30,29 @@
     </div>
 
     <!-- Script JavaScript -->
-   <!-- Script JavaScript -->
-<script>
-    // Obtener todos los elementos de subtítulo
-    const subtitleLinks = document.querySelectorAll('.subtitle-toggle');
+    <script>
+        // Obtener todos los elementos de subtítulo
+        const subtitleLinks = document.querySelectorAll('.subtitle-toggle');
 
-    // Iterar sobre cada enlace de subtítulo y agregar un evento de clic
-    subtitleLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            // Obtener el contenedor del cuadro de texto (el elemento padre del enlace)
-            const container = link.parentNode;
+        // Iterar sobre cada enlace de subtítulo y agregar un evento de clic
+        subtitleLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                // Obtener el contenedor del cuadro de texto (el elemento padre del enlace)
+                const container = link.parentNode;
 
-            // Buscar el cuadro de texto dentro del contenedor
-            const textbox = container.querySelector('.hidden-textbox');
+                // Buscar el cuadro de texto dentro del contenedor
+                const textbox = container.querySelector('.hidden-textbox textarea');
 
-            // Alternar la clase para mostrar u ocultar el cuadro de texto
-            textbox.classList.toggle('show-textbox');
+                // Obtener el texto que se mostrará en el cuadro de texto
+                const textToShow = link.getAttribute('data-text');
+
+                // Establecer el texto en el cuadro de texto
+                textbox.value = textToShow;
+
+                // Alternar la clase para mostrar u ocultar el cuadro de texto
+                textbox.parentNode.classList.toggle('show-textbox');
+            });
         });
-    });
-</script>
-
+    </script>
 </body>
 </html>
