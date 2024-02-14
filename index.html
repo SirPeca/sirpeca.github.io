@@ -28,21 +28,25 @@
             <li><a href="tryhackme.html" target="_blank">Registro de TryHackMe</a></li>
         </ul>
     </div>
-
-    // Obtener todos los elementos de subtítulo
-const subtitleLinks = document.querySelectorAll('.subtitle-toggle');
-
-// Iterar sobre cada enlace de subtítulo y agregar un evento de clic
-subtitleLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        // Obtener el siguiente elemento hermano (cuadro de texto)
-        const textbox = link.nextElementSibling;
-
-        // Alternar la clase para mostrar u ocultar el cuadro de texto
-        textbox.classList.toggle('show-textbox');
-    });
-});
-    
+ 
 </body>
 </html>
 
+<!-- Script JavaScript -->
+    <script>
+        // Obtener todos los elementos de subtítulo
+        const subtitleLinks = document.querySelectorAll('.subtitle-toggle');
+
+        // Iterar sobre cada enlace de subtítulo y agregar un evento de clic
+        subtitleLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                // Obtener el siguiente elemento hermano (cuadro de texto)
+                const textbox = link.nextElementSibling;
+
+                // Alternar la clase para mostrar u ocultar el cuadro de texto
+                textbox.classList.toggle('show-textbox');
+            });
+        });
+    </script>
+</body>
+</html>
