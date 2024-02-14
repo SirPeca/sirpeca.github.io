@@ -1,63 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Hoja de Vida</title>
-    <link rel="stylesheet" href="index.css"> <!-- Enlaza tu archivo CSS -->
-</head>
-<body>
-    <div class="container">
-        <h1>Mi Hoja de Vida</h1>
-        <p>¡Bienvenido a mi hoja de vida!</p>
-        <ul>
-            <li>
-                <a href="#" class="subtitle-toggle" data-text="Soy un capo de la informática">Sobre mí</a>
-                <div class="hidden-textbox">
-                    Soy un profesional de futbol.
-                </div>
-            </li>
-            <li>
-                <a href="#" class="subtitle-toggle">Formación Académica</a>
-                <div class="hidden-textbox">
-                    Texto de formación académica aquí.
-                </div>
-            </li>
-            <li>
-                <a href="#" class="subtitle-toggle">Formación Laboral</a>
-                <div class="hidden-textbox">
-                    Texto de experiencia laboral aquí.
-                </div>
-            </li>
-            <li><a href="https://www.hackthebox.eu/" target="_blank">Registro de Hack The Box</a></li>
-            <li><a href="https://portswigger.net/" target="_blank">Registro de PortSwigger</a></li>
-            <li><a href="tryhackme.html" target="_blank">Registro de TryHackMe</a></li>
-        </ul>
-    </div>
-
-    <!-- Script JavaScript -->
+<!-- Script JavaScript -->
     <script>
+        // Espera a que el DOM esté completamente cargado
         document.addEventListener('DOMContentLoaded', () => {
+            // Obtener todos los elementos de subtítulo
             const subtitleLinks = document.querySelectorAll('.subtitle-toggle');
 
+            // Iterar sobre cada enlace de subtítulo y agregar un evento de clic
             subtitleLinks.forEach(link => {
                 link.addEventListener('click', () => {
-                    const container = link.parentElement;
-                    const textbox = container.querySelector('.hidden-textbox');
+                    // Obtener el cuadro de texto asociado al enlace
+                    const textbox = link.nextElementSibling;
 
-                    // Si el cuadro de texto está abierto, ciérralo; de lo contrario, ábrelo
-                    if (textbox.classList.contains('show-textbox')) {
+                    // Ocultar todos los cuadros de texto
+                    document.querySelectorAll('.hidden-textbox').forEach(textbox => {
                         textbox.classList.remove('show-textbox');
-                    } else {
-                        // Cierra cualquier otro cuadro de texto abierto
-                        const openTextboxes = document.querySelectorAll('.show-textbox');
-                        openTextboxes.forEach(openTextbox => {
-                            openTextbox.classList.remove('show-textbox');
-                        });
+                    });
 
-                        // Abre el cuadro de texto correspondiente
-                        textbox.classList.add('show-textbox');
-                    }
+                    // Mostrar el cuadro de texto asociado al enlace actual
+                    textbox.classList.toggle('show-textbox');
                 });
             });
         });
