@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Ajustar la posición del cuadro de texto
             textbox.style.top = `${container.offsetTop}px`; // Posiciona el cuadro de texto en la misma posición superior que el contenedor
-            textbox.style.left = `${container.offsetLeft + container.offsetWidth}px`; // Abre el cuadro a la derecha del título
+            textbox.style.left = `${linkPosition.right - 20}px`; // Abre el cuadro a la derecha del título
 
             // Alternar la clase para mostrar u ocultar el cuadro de texto
             textbox.classList.toggle('show-textbox');
