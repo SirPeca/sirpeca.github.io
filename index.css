@@ -48,8 +48,17 @@ a:hover {
 
 .hidden-textbox {
     display: none;
-    margin-left: 20px; /* Espacio para alinear los cuadros de texto con los subtítulos */
+    position: absolute;
+    top: 0;
+    left: 200px; /* Ajusta la posición a la derecha del título */
+    width: 500px; /* Ajusta el ancho del cuadro de texto */
+    height: 300px; /* Ajusta la altura del cuadro de texto */
+    background-color: white; /* Ajusta el color de fondo del cuadro de texto */
+    border: 1px solid #ccc; /* Añade un borde al cuadro de texto */
+    padding: 20px; /* Añade espacio interno al cuadro de texto */
+    z-index: 999; /* Asegura que esté por encima de otros elementos */
 }
+
 
 textarea {
     width: 300px;
