@@ -45,3 +45,15 @@ a {
 a:hover {
     color: #0056b3;
 }
+
+.hidden-textbox {
+    display: none;
+    margin-left: 20px; /* Espacio para alinear los cuadros de texto con los subtítulos */
+}
+
+textarea {
+    width: 300px;
+    height: 100px;
+    resize: none; /* Evita que el usuario cambie el tamaño del cuadro de texto */
+    margin-bottom: 10px;
+}
