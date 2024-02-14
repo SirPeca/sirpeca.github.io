@@ -50,7 +50,7 @@ a:hover {
     display: none;
     position: absolute;
     top: 0;
-    left: 120%; /* Ajusta la posición inicial */
+    left: 30%; /* Ajusta la posición inicial */
     width: 500px; /* Ajusta el ancho del cuadro de texto */
     background-color: white; /* Ajusta el color de fondo del cuadro de texto */
     border: 1px solid #ccc; /* Añade un borde al cuadro de texto */
