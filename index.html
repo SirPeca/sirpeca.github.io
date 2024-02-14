@@ -37,32 +37,26 @@
 
     <!-- Script JavaScript -->
     <script>
-        // Espera a que el DOM esté completamente cargado
-document.addEventListener('DOMContentLoaded', () => {
-    // Obtener todos los elementos de subtítulo
-    const subtitleLinks = document.querySelectorAll('.subtitle-toggle');
+        document.addEventListener('DOMContentLoaded', () => {
+            const subtitleLinks = document.querySelectorAll('.subtitle-toggle');
+            let currentTextbox = null; // Mantener un registro del cuadro de texto actualmente abierto
 
-    // Obtener el contenedor principal
-    const container = document.querySelector('.container');
+            subtitleLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    const container = link.parentElement;
+                    const textbox = container.querySelector('.hidden-textbox');
 
-    // Iterar sobre cada enlace de subtítulo y agregar un evento de clic
-    subtitleLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            // Obtener el contenedor del cuadro de texto (el elemento hermano del enlace)
-            const container = link.parentElement;
+                    // Cerrar el cuadro de texto actualmente abierto
+                    if (currentTextbox && currentTextbox !== textbox) {
+                        currentTextbox.classList.remove('show-textbox');
+                    }
 
-            // Buscar el cuadro de texto dentro del contenedor
-            const textbox = container.querySelector('.hidden-textbox');
-
-            // Ajustar la posición del cuadro de texto
-            textbox.style.top = `${container.offsetTop}px`; // Posiciona el cuadro de texto en la misma posición superior que el contenedor
-            textbox.style.left = `${container.offsetLeft + container.offsetWidth}px`; // Abre el cuadro a la derecha del título
-
-            // Alternar la clase para mostrar u ocultar el cuadro de texto
-            textbox.classList.toggle('show-textbox');
+                    // Si el cuadro actual está cerrado, ábrelo; si está abierto, ciérralo
+                    textbox.classList.toggle('show-textbox');
+                    currentTextbox = textbox; // Actualizar el cuadro de texto actual
+                });
+            });
         });
-    });
-});
     </script>
 </body>
 </html>
