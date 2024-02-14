@@ -42,17 +42,24 @@
 
         // Iterar sobre cada enlace de subtítulo y agregar un evento de clic
         subtitleLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                // Obtener el contenedor del cuadro de texto (el elemento hermano del enlace)
-                const container = link.parentElement;
+    link.addEventListener('click', () => {
+        // Obtener el contenedor del cuadro de texto (el elemento hermano del enlace)
+        const container = link.parentElement;
 
-                // Buscar el cuadro de texto dentro del contenedor
-                const textbox = container.querySelector('.hidden-textbox');
+        // Buscar el cuadro de texto dentro del contenedor
+        const textbox = container.querySelector('.hidden-textbox');
 
-                // Alternar la clase para mostrar u ocultar el cuadro de texto
-                textbox.classList.toggle('show-textbox');
-            });
-        });
+        // Obtener la posición del título seleccionado
+        const titlePosition = link.getBoundingClientRect();
+
+        // Ajustar la posición del cuadro de texto
+        textbox.style.top = `${titlePosition.top}px`;
+        textbox.style.left = `${titlePosition.right}px`; // Abre el cuadro a la derecha del título
+
+        // Alternar la clase para mostrar u ocultar el cuadro de texto
+        textbox.classList.toggle('show-textbox');
+    });
+});
     </script>
 </body>
 </html>
