@@ -45,8 +45,8 @@
             // Iterar sobre cada enlace de subtítulo y agregar un evento de clic
             subtitleLinks.forEach(link => {
                 link.addEventListener('click', () => {
-                    // Obtener el contenedor del cuadro de texto (el elemento hermano del enlace)
-                    const container = link.parentElement;
+                    // Obtener el contenedor del cuadro de texto (el elemento hermano del padre del enlace)
+                    const container = link.parentNode;
 
                     // Buscar el cuadro de texto dentro del contenedor
                     const textbox = container.querySelector('.hidden-textbox');
