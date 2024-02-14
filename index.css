@@ -84,6 +84,13 @@ h4 {
     border-radius: 5px;
 }
 
+/* Estilos para el enlace de GitHub */
+.github-link {
+    position: fixed; /* Lo posiciona de forma fija en la ventana del navegador */
+    bottom: 0; /* Lo coloca en la parte inferior de la ventana */
+    left: 0; /* Lo coloca en el lado izquierdo de la ventana */
+    margin: 20px; /* Añade un margen para darle espacio al contenido */
+}
 
 /* Estilos para los detalles que se ocultan */
 .details {
