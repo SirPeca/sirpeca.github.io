@@ -30,20 +30,25 @@
     </div>
 
     <!-- Script JavaScript -->
-    <script>
-        // Obtener todos los elementos de subtítulo
-        const subtitleLinks = document.querySelectorAll('.subtitle-toggle');
+   <!-- Script JavaScript -->
+<script>
+    // Obtener todos los elementos de subtítulo
+    const subtitleLinks = document.querySelectorAll('.subtitle-toggle');
 
-        // Iterar sobre cada enlace de subtítulo y agregar un evento de clic
-        subtitleLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                // Obtener el siguiente elemento hermano (cuadro de texto)
-                const textbox = link.nextElementSibling;
+    // Iterar sobre cada enlace de subtítulo y agregar un evento de clic
+    subtitleLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            // Obtener el contenedor del cuadro de texto (el elemento padre del enlace)
+            const container = link.parentNode;
 
-                // Alternar la clase para mostrar u ocultar el cuadro de texto
-                textbox.classList.toggle('hidden-textbox');
-            });
+            // Buscar el cuadro de texto dentro del contenedor
+            const textbox = container.querySelector('.hidden-textbox');
+
+            // Alternar la clase para mostrar u ocultar el cuadro de texto
+            textbox.classList.toggle('show-textbox');
         });
-    </script>
+    });
+</script>
+
 </body>
 </html>
