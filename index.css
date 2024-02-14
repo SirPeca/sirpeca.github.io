@@ -17,7 +17,7 @@ body {
     margin: 0 auto;
     padding: 20px;
     box-sizing: border-box;
-    text-align: center;
+    /* text-align: center; */ /* Elimina esta línea */
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
