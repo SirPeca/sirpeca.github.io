@@ -69,7 +69,7 @@ h3 {
 /* Estilos para los códigos */
 .prompt {
     font-family: monospace;
-    background-color: #f0f0f0;
+    background-color: #333333;
     padding: 5px;
     border-radius: 5px;
 }
