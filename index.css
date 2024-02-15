@@ -1,78 +1,44 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-    margin: 0;
-    padding: 0;
-}
-
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-}
-
+/* Estilos para h1 */
 h1 {
-    color: #333;
-    font-size: 36px;
-    margin-bottom: 20px;
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 
-p {
-    color: #666;
-    font-size: 18px;
-    margin-bottom: 40px;
+/* Estilos para h2 */
+h2 {
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  cursor: pointer;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    text-align: left; /* Alinea el texto a la izquierda */
+/* Estilos para h3 */
+h3 {
+  font-size: 16px;
+  margin-top: 15px;
+  margin-bottom: 5px;
 }
 
-li {
-    margin-bottom: 15px;
-}
-
-a {
-    text-decoration: none;
-    color: #007bff;
-    font-size: 20px;
-    transition: color 0.3s ease;
-}
-
-a:hover {
-    color: #0056b3;
-}
-
-.hidden-textbox {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0%; /* Ajusta la posición inicial */
-    width: 500px; /* Ajusta el ancho del cuadro de texto */
-    background-color: white; /* Ajusta el color de fondo del cuadro de texto */
-    border: 1px solid #ccc; /* Añade un borde al cuadro de texto */
-    padding: 20px; /* Añade espacio interno al cuadro de texto */
-    z-index: 999; /* Asegura que esté por encima de otros elementos */
-}
-
-
-textarea {
-    width: 300px;
-    height: 100px;
-    resize: none; /* Evita que el usuario cambie el tamaño del cuadro de texto */
-    margin-bottom: 10px;
-}
-
-.show-textbox {
-    display: block !important;
-}
-
+/* Estilos para la clase 'descripcion' */
 .descripcion {
-    display: none;
-    padding: 10px;
-    border: 1px solid #ccc;
-    margin-top: 5px;
-  }
+  display: none;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+}
+
+/* Estilos para los enlaces */
+.enlaces {
+  margin-top: 20px;
+}
+
+.enlaces a {
+  display: block;
+  margin-bottom: 5px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.enlaces a:hover {
+  text-decoration: underline;
+}
