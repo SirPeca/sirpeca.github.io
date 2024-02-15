@@ -1,42 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Hoja de Vida</title>
-    <link rel="stylesheet" href="index.css"> <!-- Enlaza tu archivo CSS -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hoja de vidad</title>
+<link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Mi Hoja de Vida</h1>
-        <p>¡Bienvenido a mi hoja de vida!</p>
-        <ul>
-            <li>
-                <a href="#" class="subtitle-toggle" data-text="Soy un capo de la informática">Sobre mí</a>
-                <div class="descripcion">
-                    Soy un profesional de futbol.
-                </div>
-            </li>
-            <li>
-                <a href="#" class="subtitle-toggle">Formación Académica</a>
-                <div class="descripcion">
-                    Texto de formación académica aquí.
-                </div>
-            </li>
-            <li>
-                <a href="#" class="subtitle-toggle">Formación Laboral</a>
-                <div class="descripcion">
-                    Texto de experiencia laboral aquí.
-                </div>
-            </li>
-            <li><a href="https://www.hackthebox.eu/" target="_blank">Registro de Hack The Box</a></li>
-            <li><a href="https://portswigger.net/" target="_blank">Registro de PortSwigger</a></li>
-            <li><a href="tryhackme.html" target="_blank">Registro de TryHackMe</a></li>
-        </ul>
-    </div>
 
-    <!-- Script JavaScript -->
-    <script>
+<h1>Hoja de vida</h1>
+
+<h2 onclick="toggle('sobreMi')">Sobre mí</h2>
+<div id="sobreMi" class="descripcion">
+  Soy papá de dos niños y un entusiasta de la ciberseguridad.
+</div>
+
+<h2 onclick="toggle('formacionAcademica')">Formación Académica</h2>
+<div id="formacionAcademica" class="descripcion">
+  Estudié en 5 universidades.
+</div>
+
+<div class="enlaces">
+  <a href="https://www.hackthebox.eu/" target="_blank">Registro de Hack The Box</a>
+  <a href="https://portswigger.net/" target="_blank">Registro de PortSwigger</a>
+  <a href="tryhackme.html" target="_blank">Registro de TryHackMe</a>
+</div>
+
+<script>
 function toggle(id) {
   var elemento = document.getElementById(id);
   var elementos = document.getElementsByClassName('descripcion');
@@ -52,6 +42,6 @@ function toggle(id) {
   }
 }
 </script>
+
 </body>
 </html>
-
