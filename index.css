@@ -1,9 +1,16 @@
+body {
+  background-image: url('https://i.imgur.com/VtVQCc6.jpg'); /* Reemplaza 'ruta/a/la/imagen/fondo.jpg' con la ruta real de la imagen descargada */
+  background-size: cover; /* Para asegurarse de que la imagen cubra todo el fondo */
+  background-position: center; /* Para centrar la imagen en el fondo */
+  /* Puedes agregar más propiedades aquí según tus preferencias */
+}
+
 /* Estilos para h1 */
 h1 {
   font-size: 48px;  /* Tamaño de la fuente duplicado */
   margin-bottom: 10px;  /* Margen inferior */
   font-weight: bold;  /* Grosor de la fuente */
-  color: #007bff;  /* Color azul fuerte */
+  color: #FFFFFF;  /* Color azul fuerte */
   text-align: center;  /* Centrado */
 }
 
@@ -14,7 +21,7 @@ h2 {
   margin-bottom: 10px;  /* Margen inferior */
   cursor: pointer;  /* Cambia el cursor al puntero al pasar sobre el elemento */
   font-weight: bold;  /* Grosor de la fuente */
-  color: #007bff;  /* Color azul fuerte */
+  color: #FFFFFF;  /* Color azul fuerte */
 }
 
 /* Estilos para h2 y enlaces dentro de la clase 'enlaces' */
@@ -24,7 +31,7 @@ h2, .enlaces a {
   margin-bottom: 10px;  /* Margen inferior */
   cursor: pointer;  /* Cambia el cursor al puntero al pasar sobre el elemento */
   font-weight: bold;  /* Grosor de la fuente */
-  color: #007bff;  /* Color azul fuerte */
+  color: #FFFFFF;  /* Color azul fuerte */
 }
 
 /* Estilos para h3 */
@@ -33,7 +40,7 @@ h3 {
   margin-top: 15px;  /* Margen superior */
   margin-bottom: 5px;  /* Margen inferior */
   font-style: normal;  /* Estilo de la fuente normal */
-  color: #0056b3;  /* Azul más tenue */
+  color: #FFFFFF;  /* Azul más tenue */
 }
 
 /* Estilos para la clase 'descripcion' */
@@ -44,7 +51,7 @@ h3 {
   margin-top: 5px;
   font-family: Arial, sans-serif; /* Fuente */
   font-size: 14px; /* Tamaño de la fuente */
-  color: #666; /* Color del texto */
+  color: #FFFFFF; /* Color del texto */
 }
 
 /* Estilos para los enlaces */
