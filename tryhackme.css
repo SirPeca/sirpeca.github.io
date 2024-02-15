@@ -11,6 +11,19 @@ body {
     background-attachment: fixed; /* Fija la posición del fondo */
 }
 
+/* Estilos para el contenedor de fondo */
+.background-container {
+    background-image: url('https://sirpeca.github.io/imagenes/Back-tryhackme.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Fija la posición del fondo */
+    min-height: 100vh; /* Asegura que el contenedor tenga al menos la altura de la ventana del navegador */
+    overflow: auto; /* Permite el desplazamiento del contenido si es necesario */
+    position: relative; /* Establece una posición relativa para permitir el posicionamiento absoluto del contenido */
+}
+
+/* Otros estilos para el contenido de la página */
+/* Por ejemplo, estilos para tus títulos, desplegables, etc. */
 
 /* Estilos para el contenedor principal */
 .container {
