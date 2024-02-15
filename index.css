@@ -1,31 +1,29 @@
 /* Estilos para h1 */
 h1 {
-  font-size: 24px;  /* Tamaño de la fuente */
+  font-size: 48px;  /* Tamaño de la fuente duplicado */
   margin-bottom: 10px;  /* Margen inferior */
   font-weight: bold;  /* Grosor de la fuente */
-  color: #333;  /* Color del texto */
-  /* Puedes agregar más propiedades aquí según tus preferencias */
+  color: #007bff;  /* Color azul fuerte */
+  text-align: center;  /* Centrado */
 }
 
 /* Estilos para h2 */
 h2 {
-  font-size: 20px;  /* Tamaño de la fuente */
+  font-size: 24px;  /* Tamaño de la fuente original */
   margin-top: 20px;  /* Margen superior */
   margin-bottom: 10px;  /* Margen inferior */
   cursor: pointer;  /* Cambia el cursor al puntero al pasar sobre el elemento */
   font-weight: bold;  /* Grosor de la fuente */
-  color: #333;  /* Color del texto */
-  /* Puedes agregar más propiedades aquí según tus preferencias */
+  color: #007bff;  /* Color azul fuerte */
 }
 
 /* Estilos para h3 */
 h3 {
-  font-size: 16px;  /* Tamaño de la fuente */
+  font-size: 24px;  /* Tamaño de la fuente duplicado */
   margin-top: 15px;  /* Margen superior */
   margin-bottom: 5px;  /* Margen inferior */
-  font-style: italic;  /* Estilo de la fuente */
-  color: #555;  /* Color del texto */
-  /* Puedes agregar más propiedades aquí según tus preferencias */
+  font-style: normal;  /* Estilo de la fuente normal */
+  color: #0056b3;  /* Azul más tenue */
 }
 
 /* Estilos para la clase 'descripcion' */
@@ -34,12 +32,10 @@ h3 {
   padding: 10px;
   border: 1px solid #ccc;
   margin-top: 5px;
-  font-family: Arial, sans-serif; /* Cambia la fuente del texto */
-  font-size: 14px; /* Cambia el tamaño de la fuente */
-  color: #666; /* Cambia el color del texto */
-  /* Puedes agregar más propiedades aquí según tus preferencias */
+  font-family: Arial, sans-serif; /* Fuente */
+  font-size: 14px; /* Tamaño de la fuente */
+  color: #666; /* Color del texto */
 }
-
 
 /* Estilos para los enlaces */
 .enlaces {
@@ -49,7 +45,9 @@ h3 {
 .enlaces a {
   display: block; /* Cambiamos el display de los enlaces a block */
   margin-bottom: 5px;
-  color: #007bff;
+  font-family: Arial, sans-serif; /* Fuente */
+  font-size: 16px; /* Tamaño de la fuente */
+  color: #0056b3; /* Azul más tenue */
   text-decoration: none;
 }
 
