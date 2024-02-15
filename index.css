@@ -76,10 +76,15 @@ h3 {
 body .enlaces a {
   display: block;
   margin-bottom: 5px;
-  font-family: Arial, sans-serif;
-  font-size: 16px;
+  /*font-family: Arial, sans-serif;
+  font-size: 20px;
   color: #FFFFFF; /* Cambié el color a blanco */
   text-decoration: none;
+  font-family: "Gabriela", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  color: #FFFFFF;
 }
 
 
