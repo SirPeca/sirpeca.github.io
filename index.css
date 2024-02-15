@@ -25,27 +25,36 @@ h2 {
   margin-top: 20px;  /* Margen superior */
   margin-bottom: 10px;  /* Margen inferior */
   cursor: pointer;  /* Cambia el cursor al puntero al pasar sobre el elemento */
-  font-weight: bold;  /* Grosor de la fuente */
+  /*font-weight: bold;  /* Grosor de la fuente */
   color: #FFFFFF;  /* Color azul fuerte */
+  font-family: "Gabriela", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 /* Estilos para h2 y enlaces dentro de la clase 'enlaces' */
 h2, .enlaces a {
-  font-size: 20px;  /* Tamaño de la fuente */
+  font-size: 24px;  /* Tamaño de la fuente */
   margin-top: 20px;  /* Margen superior */
   margin-bottom: 10px;  /* Margen inferior */
   cursor: pointer;  /* Cambia el cursor al puntero al pasar sobre el elemento */
-  font-weight: bold;  /* Grosor de la fuente */
+  /*font-weight: bold;  /* Grosor de la fuente */
   color: #FFFFFF;  /* Color azul fuerte */
+  font-family: "Gabriela", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 /* Estilos para h3 */
 h3 {
   font-size: 24px;  /* Tamaño de la fuente duplicado */
-  margin-top: 15px;  /* Margen superior */
+  margin-top: 20px;  /* Margen superior */
   margin-bottom: 5px;  /* Margen inferior */
-  font-style: normal;  /* Estilo de la fuente normal */
+  /*font-style: normal;  /* Estilo de la fuente normal */
   color: #FFFFFF;  /* Azul más tenue */
+  font-family: "Gabriela", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 /* Estilos para la clase 'descripcion' */
