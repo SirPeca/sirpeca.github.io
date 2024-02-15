@@ -83,12 +83,19 @@
 <script>
 function toggle(id) {
   var elemento = document.getElementById(id);
+  var elementos = document.getElementsByClassName('descripcion');
+  for (var i = 0; i < elementos.length; i++) {
+    if (elementos[i] !== elemento) {
+      elementos[i].style.display = 'none';
+    }
+  }
   if (elemento.style.display === 'block' || elemento.style.display === '') {
     elemento.style.display = 'none';
   } else {
     elemento.style.display = 'block';
   }
 }
+
 
 </script>
 
