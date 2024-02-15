@@ -5,7 +5,7 @@ body {
     padding: 0;
     background-color: #333333;
     color: #ffffff; /* Hacer todo el texto blanco */
-    background-image: url('https://i.imgur.com/wxtv5Ma.jpg'); /* URL directa de la imagen alojada en Imgur */
+    background-image: url('https://sirpeca.github.io/imagenes/Back-tryhackme.jpg'); /* URL directa de la imagen alojada en Imgur */
     background-size: cover; /* Ajusta el tamaño de la imagen al tamaño del contenedor */
     background-position: center; /* Centra la imagen de fondo */
 }
