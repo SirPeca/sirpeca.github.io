@@ -72,3 +72,22 @@ body .enlaces a {
 .enlaces a:hover {
   text-decoration: underline;
 }
+
+/* Estilos para pantallas pequeñas */
+@media only screen and (max-width: 600px) {
+  /* Agrega tus estilos aquí */
+  h1 {
+    font-size: 36px; /* Ejemplo de reducción de tamaño de fuente para dispositivos pequeños */
+  }
+}
+
+.imagen-responsiva {
+  max-width: 100%;
+  height: auto;
+}
+
+.contenedor-flexible {
+  display: flex;
+  flex-direction: column; /* Para dispositivos móviles, cambiar la dirección del flujo */
+  /* Agrega más propiedades según sea necesario */
+}
