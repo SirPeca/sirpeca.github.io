@@ -34,7 +34,12 @@ h3 {
   padding: 10px;
   border: 1px solid #ccc;
   margin-top: 5px;
+  font-family: Arial, sans-serif; /* Cambia la fuente del texto */
+  font-size: 14px; /* Cambia el tamaño de la fuente */
+  color: #666; /* Cambia el color del texto */
+  /* Puedes agregar más propiedades aquí según tus preferencias */
 }
+
 
 /* Estilos para los enlaces */
 .enlaces {
