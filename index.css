@@ -47,11 +47,11 @@ h2, .enlaces a {
 
 /* Estilos para h3 */
 h3 {
-  font-size: 24px;  /* Tamaño de la fuente duplicado */
+  font-size: 20px;  /* Tamaño de la fuente duplicado */
   margin-top: 20px;  /* Margen superior */
   margin-bottom: 5px;  /* Margen inferior */
   /*font-style: normal;  /* Estilo de la fuente normal */
-  color: #FFFFFF;  /* Azul más tenue */
+  color: #4A4E51;  /* Gris asfalto */
   font-family: "Gabriela", serif;
   font-weight: 400;
   font-style: normal;
