@@ -97,6 +97,12 @@ function toggle(id) {
 
 function toggleTrabajo(id) {
   var elemento = document.getElementById(id);
+  var elementosTrabajo = document.querySelectorAll('.descripcion > div');
+  elementosTrabajo.forEach(function(elementoTrabajo) {
+    if (elementoTrabajo !== elemento) {
+      elementoTrabajo.style.display = 'none';
+    }
+  });
   if (elemento.style.display === 'block' || elemento.style.display === '') {
     elemento.style.display = 'none';
   } else {
