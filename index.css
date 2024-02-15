@@ -59,14 +59,15 @@ h3 {
   margin-top: 20px;
 }
 
-.enlaces a {
-  display: block; /* Cambiamos el display de los enlaces a block */
+body .enlaces a {
+  display: block;
   margin-bottom: 5px;
-  font-family: Arial, sans-serif; /* Fuente */
-  font-size: 16px; /* Tamaño de la fuente */
-  color: #0056b3; /* Azul más tenue */
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #FFFFFF; /* Cambié el color a blanco */
   text-decoration: none;
 }
+
 
 .enlaces a:hover {
   text-decoration: underline;
