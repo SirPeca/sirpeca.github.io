@@ -8,9 +8,12 @@ body {
 
 /* Estilos para h1 */
 h1 {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
   font-size: 48px;  /* Tamaño de la fuente duplicado */
   margin-bottom: 10px;  /* Margen inferior */
-  font-weight: bold;  /* Grosor de la fuente */
+  /*font-weight: bold;  /* Grosor de la fuente */
   color: #FFFFFF;  /* Color azul fuerte */
   text-align: center;  /* Centrado */
 }
@@ -92,3 +95,4 @@ body .enlaces a {
   flex-direction: column; /* Para dispositivos móviles, cambiar la dirección del flujo */
   /* Agrega más propiedades según sea necesario */
 }
+
