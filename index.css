@@ -33,7 +33,7 @@ h3 {
 }
 
 .enlaces a {
-  display: block;
+  display: block; /* Cambiamos el display de los enlaces a block */
   margin-bottom: 5px;
   color: #007bff;
   text-decoration: none;
