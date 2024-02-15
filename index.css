@@ -1,5 +1,5 @@
 body {
-  background-image: url('https://i.imgur.com/fuEltkT.jpg'); /* Reemplaza 'ruta/a/la/imagen/fondo.jpg' con la ruta real de la imagen descargada */
+  background-image: url('https://i.imgur.com/undefined.jpg'); /* Reemplaza 'ruta/a/la/imagen/fondo.jpg' con la ruta real de la imagen descargada */
   background-size: cover; /* Para asegurarse de que la imagen cubra todo el fondo */
   background-position: center; /* Para centrar la imagen en el fondo */
   /* Puedes agregar más propiedades aquí según tus preferencias */
