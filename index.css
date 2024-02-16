@@ -121,7 +121,10 @@ body .enlaces a {
 }
 
 .link-certificado {
-  color: blue; /* Color del enlace */
+  color: #007bff; /* Azul celeste */
   font-size: smaller; /* Tamaño de fuente más pequeño */
   text-decoration: none; /* Sin subrayado */
+  font-weight: normal; /* Texto en negrita */
+  margin-left: 10px; /* Espacio a la izquierda del enlace */
 }
+
