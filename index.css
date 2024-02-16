@@ -3,6 +3,7 @@ body {
   background-size: cover; /* Para asegurarse de que la imagen cubra todo el fondo */
   background-position: center; /* Para centrar la imagen en el fondo */
   background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+  background-attachment: fixed; /* Para hacer que el fondo se mantenga fijo */
   background-color: black; /* Establece el color de fondo como negro */
   /* Puedes agregar más propiedades aquí según tus preferencias */
 }
