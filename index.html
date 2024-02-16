@@ -207,19 +207,21 @@ function toggleTrabajo(id) {
 function mostrarCertificado(id) {
   var certificado = document.getElementById(id);
   var certificados = document.querySelectorAll('.certificado');
-  
+
   certificados.forEach(function(cert) {
     if (cert !== certificado && cert.style.display === 'block') {
       cert.style.display = 'none';
     }
   });
 
+  // Ahora solo abrimos o cerramos el certificado seleccionado
   if (certificado.style.display === 'block' || certificado.style.display === '') {
     certificado.style.display = 'none';
   } else {
     certificado.style.display = 'block';
   }
 }
+
 
 
 </script>
