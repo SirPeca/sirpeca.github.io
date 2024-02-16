@@ -207,17 +207,20 @@ function toggleTrabajo(id) {
 function mostrarCertificado(id) {
   var certificado = document.getElementById(id);
   var certificados = document.querySelectorAll('.certificado');
+  
   certificados.forEach(function(cert) {
     if (cert !== certificado) {
       cert.style.display = 'none';
     }
   });
+
   if (certificado.style.display === 'block' || certificado.style.display === '') {
     certificado.style.display = 'none';
   } else {
     certificado.style.display = 'block';
   }
 }
+
 
 </script>
 
