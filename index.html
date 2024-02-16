@@ -137,15 +137,19 @@
   <span onclick="toggle('galeriaCertificados')">Certificados</span>
 </div>
 
-<div id="galeriaCertificados" class="galeria">
-  <!-- Aquí puedes agregar tus certificados como imágenes o enlaces -->
-  <!-- Ejemplo con imágenes -->
-  <img src="ruta/a/tu/certificado1.jpg" alt="Certificado 1">
-  <img src="ruta/a/tu/certificado2.jpg" alt="Certificado 2">
-  <!-- Ejemplo con enlaces -->
-  <a href="ruta/a/tu/certificado1.pdf" target="_blank">Certificado 1</a>
-  <a href="ruta/a/tu/certificado2.pdf" target="_blank">Certificado 2</a>
+<h2 onclick="toggle('galeriaCertificados')">Certificados</h2>
+<div id="galeriaCertificados" class="descripcion">
+  <h3 onclick="mostrarCertificado('certificado1')">Certificado 1</h3>
+  <div id="certificado1" class="descripcion certificado">
+    <img src="ruta/a/tu/certificado1.jpg" alt="Certificado 1">
+  </div>
+  <h3 onclick="mostrarCertificado('certificado2')">Certificado 2</h3>
+  <div id="certificado2" class="descripcion certificado">
+    <img src="ruta/a/tu/certificado2.jpg" alt="Certificado 2">
+  </div>
+  <!-- Agrega aquí más certificados según sea necesario -->
 </div>
+
 
 <script>
 function toggle(id) {
@@ -178,6 +182,20 @@ function toggleTrabajo(id) {
   }
 }
 
+function mostrarCertificado(id) {
+  var certificado = document.getElementById(id);
+  var certificados = document.querySelectorAll('.certificado');
+  certificados.forEach(function(cert) {
+    if (cert !== certificado) {
+      cert.style.display = 'none';
+    }
+  });
+  if (certificado.style.display === 'block' || certificado.style.display === '') {
+    certificado.style.display = 'none';
+  } else {
+    certificado.style.display = 'block';
+  }
+}
 
 </script>
 
