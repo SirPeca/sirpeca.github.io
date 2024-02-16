@@ -119,3 +119,9 @@ body .enlaces a {
   display: none;
   /* Agrega aquí estilos adicionales según tus preferencias */
 }
+
+.link-certificado {
+  color: blue; /* Color del enlace */
+  font-size: smaller; /* Tamaño de fuente más pequeño */
+  text-decoration: none; /* Sin subrayado */
+}
