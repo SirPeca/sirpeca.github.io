@@ -209,7 +209,7 @@ function mostrarCertificado(id) {
   var certificados = document.querySelectorAll('.certificado');
   
   certificados.forEach(function(cert) {
-    if (cert !== certificado) {
+    if (cert !== certificado && cert.style.display === 'block') {
       cert.style.display = 'none';
     }
   });
