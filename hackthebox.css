@@ -5,7 +5,7 @@ body {
     padding: 0;
     background-color: #FFFFFF;
     color: #000000; /* Hacer todo el texto blanco */
-    background-image: url('https://sirpeca.github.io/imagenes/Back-tryhackme.jpg'); /* este fondo si que va */
+    background-image: url('https://sirpeca.github.io/imagenes/Back-hackthebox.jpg'); /* este fondo si que va */
     background-size: cover; /* Ajusta el tamaño de la imagen al tamaño del contenedor */
     background-position: center; /* Centra la imagen de fondo */
     background-attachment: fixed; /* Fija la posición del fondo */
