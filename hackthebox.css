@@ -13,7 +13,7 @@ body {
 
 /* Estilos para el contenedor de fondo */
 .background-container {
-    background-image: url('https://sirpeca.github.io/imagenes/Back-tryhackme.jpg');
+    background-image: url('https://sirpeca.github.io/imagenes/Back-hackthebox.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed; /* Fija la posición del fondo */
