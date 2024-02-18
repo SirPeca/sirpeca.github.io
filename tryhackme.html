@@ -24,10 +24,10 @@
     <h2 onclick="toggleDetails('maquinas-resueltas')">Máquinas Virtuales Resueltas</h2>
             <div id="maquinas-resueltas" class="details">
 <div id="Agen-Sudo">
-    <h3 onclick="toggleDetails('agen-sudo-details')">Agen Sudo</h3>
+    <h3 onclick="toggleDetails('agen-sudo-details')">Agent Sudo</h3>
     <div id="agen-sudo-details" class="details">
         
-        <h4 onclick="toggleDetails('agen-sudo-ping')">Fase de enumeración: Ping al host 10.10.10.10</h4>
+        <h4 onclick="toggleDetails('agen-sudo-ping')">Fase de enumeración: Ping al host.</h4>
         <div id="agen-sudo-ping" class="details">
             <p>Realizamos un ping al host 10.10.10.10 para verificar la conectividad:</p>
             <pre><code class="prompt">ping -c 1 10.10.10.10</code></pre>
@@ -105,8 +105,63 @@
             <pre><code class="prompt">cat root.txt</code></pre>
         </div>
 
+ <div id="Agen-Sudo-Respuestas">
+    <h3 onclick="toggleDetails('agen-sudo-respuestas-details')">Respuestas de Agent Sudo</h3>
+    <div id="agen-sudo-respuestas-details" class="details">
+        
+        <h4 onclick="toggleDetails('agen-sudo-respuestas-task1')">Task 1: Enumerate</h4>
+        <div id="agen-sudo-respuestas-task1" class="details">
+            <p>Enumerate the machine and get all the important information</p>
+            <p><strong>Answer the questions below</strong></p>
+            <p>How many open ports?</p>
+            <pre><code class="prompt">3</code></pre>
+            <p>How you redirect yourself to a secret page?</p>
+            <pre><code class="prompt">user-agent</code></pre>
+            <p>What is the agent name?</p>
+            <pre><code class="prompt">chris</code></pre>
+        </div>
+
+        <h4 onclick="toggleDetails('agen-sudo-respuestas-task2')">Task 2: Hash cracking and brute-force</h4>
+        <div id="agen-sudo-respuestas-task2" class="details">
+            <p>Done enumerate the machine? Time to brute your way out.</p>
+            <p><strong>Answer the questions below</strong></p>
+            <p>FTP password</p>
+            <pre><code class="prompt">crystal</code></pre>
+            <p>Zip file password</p>
+            <pre><code class="prompt">alien</code></pre>
+            <p>Steg password</p>
+            <pre><code class="prompt">Area51</code></pre>
+            <p>Who is the other agent (in full name)?</p>
+            <pre><code class="prompt">james</code></pre>
+            <p>SSH password</p>
+            <pre><code class="prompt">hackerrules!</code></pre>
+        </div>
+
+        <h4 onclick="toggleDetails('agen-sudo-respuestas-task3')">Task 3: Capture the user flag</h4>
+        <div id="agen-sudo-respuestas-task3" class="details">
+            <p>You know the drill.</p>
+            <p><strong>Answer the questions below</strong></p>
+            <p>What is the user flag?</p>
+            <pre><code class="prompt">b03d975e8c92a7c04146cfa7a5a313c7</code></pre>
+            <p>What is the incident of the photo called?</p>
+            <pre><code class="prompt">Roswell alien autopsy</code></pre>
+        </div>
+
+        <h4 onclick="toggleDetails('agen-sudo-respuestas-task4')">Task 4: Privilege escalation</h4>
+        <div id="agen-sudo-respuestas-task4" class="details">
+            <p>Enough with the extraordinary stuff? Time to get real.</p>
+            <p><strong>Answer the questions below</strong></p>
+            <p>CVE number for the escalation</p>
+            <pre><code class="prompt">CVE-2019-14287</code></pre>
+            <p>What is the root flag?</p>
+            <pre><code class="prompt">b53a02f55b57d4439e3341834d70c062</code></pre>
+            <p>(Bonus) Who is Agent R?</p>
+            <pre><code class="prompt">DesKel</code></pre>
+        </div>
+
     </div>
 </div>
+
                 
     <div id="rick-pepinillo">
         <h3 onclick="toggleDetails('rick-pepinillo-details')">Rick Pepinillo</h3>
