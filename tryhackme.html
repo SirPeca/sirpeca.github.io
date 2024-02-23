@@ -313,60 +313,39 @@
             <h4 onclick="toggleDetails('Bounty-Hacker-Paso1')">Paso 1: Escaneo inicial</h4>
             <div id="Bounty-Hacker-Paso1" class="details">
                 <p>Identificar la dirección IP de la máquina víctima:</p>
-                <pre><code>ping &lt;IP&gt;</code></pre>
+                <pre><code class="prompt">ping &lt;IP&gt;</code></pre>
                 <p>Este comando envía un paquete de prueba a la dirección IP especificada y espera una respuesta. Nos ayuda a verificar la conectividad y la disponibilidad de la máquina.</p>
+            </div>
 
-                <!-- Más detalles del paso 1 -->
-    </div>
+            <h4 onclick="toggleDetails('Bounty-Hacker-Paso2')">Paso 2: Enumeración y acceso inicial</h4>
+            <div id="Bounty-Hacker-Paso2" class="details">
+                <p>Exploración del servicio HTTP (puerto 80):</p>
+                <pre><code class="prompt">curl http://&lt;IP&gt;</code></pre>
+                <p>Curl es una herramienta de línea de comandos que se utiliza para transferir datos desde o hacia un servidor. En este caso, lo utilizamos para acceder al servicio web HTTP y obtener información sobre la página.</p>
+                
+                <p>Acceso al servicio FTP (puerto 21):</p>
+                <pre><code class="prompt">ftp &lt;IP&gt;</code></pre>
+                <p>Este comando inicia una sesión FTP con la máquina remota. Nos permite conectarnos al servicio FTP y explorar archivos en el servidor.</p>
+            </div>
+            
+            <!-- Más pasos aquí -->
 
-    <h4 onclick="toggleDetails('Bounty-Hacker-Paso2')">Paso 2: Enumeración y acceso inicial</h4>
-    <div id="Bounty-Hacker-Paso2" class="details">
-        <p>Exploración del servicio HTTP (puerto 80):</p>
-        <pre><code>curl http://&lt;IP&gt;</code></pre>
-        <p>Curl es una herramienta de línea de comandos que se utiliza para transferir datos desde o hacia un servidor. En este caso, lo utilizamos para acceder al servicio web HTTP y obtener información sobre la página.</p>
-        
-        <p>Acceso al servicio FTP (puerto 21):</p>
-        <pre><code>ftp &lt;IP&gt;</code></pre>
-        <p>Este comando inicia una sesión FTP con la máquina remota. Nos permite conectarnos al servicio FTP y explorar archivos en el servidor.</p>
-    </div>
-    
-    <!-- Paso 3 -->
-    <h4 onclick="toggleDetails('Bounty-Hacker-Paso3')">Paso 3: Obtención de información y credenciales</h4>
-    <div id="Bounty-Hacker-Paso3" class="details">
-        <p>Exfiltración de archivos desde el servicio FTP:</p>
-        <pre><code>get logs.txt</code></pre>
-        <pre><code>get task.txt</code></pre>
-        <p>Estos comandos descargan los archivos logs.txt y task.txt desde el servidor FTP a nuestra máquina local.</p>
-        
-        <p>Análisis de archivos descargados:</p>
-        <p>Utiliza cat o un editor de texto para revisar los archivos descargados y extraer información relevante, como posibles contraseñas o pistas.</p>
-    </div>
-    
-    <!-- Paso 4 -->
-    <h4 onclick="toggleDetails('Bounty-Hacker-Paso4')">Paso 4: Explotación de credenciales</h4>
-    <div id="Bounty-Hacker-Paso4" class="details">
-        <p>Fuerza bruta contra SSH (puerto 22):</p>
-        <pre><code>hydra -l link -P logs.txt ssh://&lt;IP&gt;</code></pre>
-        <p>hydra: Esta es una herramienta de fuerza bruta que puede realizar ataques contra varios servicios, como SSH, FTP, etc.</p>
-        <p>-l link: Especifica el nombre de usuario a utilizar en el ataque de fuerza bruta.</p>
-        <p>-P logs.txt: Especifica el archivo que contiene la lista de contraseñas que se probarán en el ataque.</p>
-    </div>
-    
-    <!-- Paso 5 -->
-    <h4 onclick="toggleDetails('Bounty-Hacker-Paso5')">Paso 5: Escalada de privilegios</h4>
-    <div id="Bounty-Hacker-Paso5" class="details">
-        <p>Revisión de permisos Sudo:</p>
-        <pre><code>sudo -l</code></pre>
-        <p>Este comando muestra los privilegios sudo asignados al usuario actual en la máquina remota. Nos ayuda a identificar si tenemos permisos especiales que pueden ser explotados para obtener acceso de root.</p>
-        
-        <p>Explotación de binario Sudo:</p>
-        <pre><code>sudo tar -cf /dev/null /dev/null --checkpoint=1 --checkpoint-action=exec=/bin/sh</code></pre>
-        <p>sudo tar: Utilizamos tar con el permiso sudo para crear un archivo tar vacío.</p>
-        <p>--checkpoint=1: Esta opción le indica a tar que ejecute el comando especificado después de cada archivo archivado.</p>
-        <p>--checkpoint-action=exec=/bin/sh: Esta opción ejecuta /bin/sh (una shell) después de cada archivo archivado, proporcionándonos acceso a una shell interactiva con privilegios de root.</p>
-    </div>
-    
-    <!-- Paso 6 -->
+            <!-- Paso 5 -->
+            <h4 onclick="toggleDetails('Bounty-Hacker-Paso5')">Paso 5: Escalada de privilegios</h4>
+            <div id="Bounty-Hacker-Paso5" class="details">
+                <p>Revisión de permisos Sudo:</p>
+                <pre><code class="prompt">sudo -l</code></pre>
+                <p>Este comando muestra los privilegios sudo asignados al usuario actual en la máquina remota. Nos ayuda a identificar si tenemos permisos especiales que pueden ser explotados para obtener acceso de root.</p>
+                
+                <p>Explotación de binario Sudo:</p>
+                <pre><code class="prompt">sudo tar -cf /dev/null /dev/null --checkpoint=1 --checkpoint-action=exec=/bin/sh</code></pre>
+                <p>sudo tar: Utilizamos tar con el permiso sudo para crear un archivo tar vacío.</p>
+                <p>--checkpoint=1: Esta opción le indica a tar que ejecute el comando especificado después de cada archivo archivado.</p>
+                <p>--checkpoint-action=exec=/bin/sh: Esta opción ejecuta /bin/sh (una shell) después de cada archivo archivado, proporcionándonos acceso a una shell interactiva con privilegios de root.</p>
+            </div>
+            
+            <!-- Más pasos aquí -->
+
     <h4 onclick="toggleDetails('Bounty-Hacker-Paso6')">Paso 6: Recolección de flags</h4>
     <div id="Bounty-Hacker-Paso6" class="details">
         <p>Recuperación de la flag de usuario y root:</p>
